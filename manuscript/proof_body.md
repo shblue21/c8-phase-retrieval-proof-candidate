@@ -1,0 +1,567 @@
+## The problem and an explicit construction
+
+A measurement of a vector $x\in\mathbb C^8$ will mean a squared modulus
+$|q^*x|^2$, where $q^*x=\sum_k\overline{q_k}x_k$. Every such measurement
+is unchanged when $x$ is multiplied by a complex number of modulus one.
+The question is whether 26 choices of $q$ can distinguish every pair of
+vectors except for this unavoidable common phase. A family with this
+property is called a phase-retrieving frame. We construct one explicitly.
+
+We identify a vector $x$ with a polynomial $f_x$ in a particular
+eight-dimensional space. The measurement vectors will lie on a single
+polynomially parametrized curve: their measurements are simply four times
+the values $|f_x(t)|^2$ at positive real parameters $t$. The construction
+has to achieve two different things. It must make 26 samples determine
+the entire polynomial $|f_x(t)|^2$, and it must make that polynomial
+determine $f_x$ up to common phase.
+
+Here is the argument in advance. The squared moduli belong to a
+26-dimensional real polynomial space, because three coefficients always
+vanish. Rolle's theorem then makes any 26 distinct positive samples
+sufficient. To recover the polynomial itself from its squared modulus,
+we align the first nonzero coefficients of two possible solutions and
+compare their average $v$ and half-difference $h$. Equal squared moduli
+say that $v(t)$ and $h(t)$ are perpendicular in the real plane $\mathbb C$
+for every real $t$. Their first two coefficients leave only four cases.
+In three cases a positive sum of squares forces the difference to vanish.
+The last case reduces to a real symmetric two-by-two matrix whose
+diagonal entries have opposite signs; its determinant can never be zero.
+The calculation below supplies the exact entries of this matrix and
+covers all cases, including vanishing initial coordinates.
+
+For a polynomial $f(t)=\sum c_k t^k$, write
+$f^\#(t)=\sum\overline{c_k}t^k$. Thus $ff^\#$ is a real polynomial
+and equals $|f(t)|^2$ when $t$ is real. We call it the squared-modulus
+polynomial of $f$.
+
+The basis below is assembled from three short polynomials and a
+shifted copy of them. Write $a=(a_0,a_1,a_2)^T$ and set
+
+\[
+a=\begin{pmatrix}1+it+t^3+4it^5\\t^2+\tfrac i2t^3-t^5\\t^4+it^5\end{pmatrix},
+\qquad
+J=\begin{pmatrix}8&0&2\\0&1&0\\2&0&0\end{pmatrix}.
+\]
+
+The matrix $J$ records a coefficient of the symmetric product:
+$[t^5](aa^T)=iJ$, where $[t^5]$ denotes the coefficient of $t^5$.
+This identity explains the choice of $J$; Section 2 shows how it produces
+the required cancellation.
+
+Take the three entries of $a+t^8J^{-1}a^\#$, followed by
+$t^6-2it^7$, the three entries of $t^8a$, and finally $t^{14}$.
+The conjugated correction is chosen to preserve the three missing
+coefficients of the squared modulus. It also prevents the low-degree
+part and its shifted copy from producing a simple ambiguity.
+
+Indeed, without that correction the comparison space would contain
+both $a_0$ and $t^8a_0$. The two nonproportional polynomials
+
+$$
+a_0(1+it^8),\qquad a_0(1-it^8)
+$$
+
+would then have identical squared moduli on the real line. The correction
+breaks this particular construction of an ambiguity; the proof below must
+still exclude all other pairs. The coefficients, including the middle
+coefficient $-2i$, are an explicit choice for which the subsequent strict
+inequalities hold. Expanded, the eight basis elements are
+
+\[
+\begin{aligned}
+p_0(t)&=1+it+t^3+4it^5+\tfrac12t^{12}-\tfrac i2t^{13},\\
+p_1(t)&=t^2+\tfrac i2t^3-t^5+t^{10}-\tfrac i2t^{11}-t^{13},\\
+p_2(t)&=t^4+it^5+\tfrac12t^8-\tfrac i2t^9+\tfrac12t^{11}-2t^{12},\\
+p_3(t)&=t^6-2it^7,\\
+p_4(t)&=t^8+it^9+t^{11}+4it^{13},\\
+p_5(t)&=t^{10}+\tfrac i2t^{11}-t^{13},\\
+p_6(t)&=t^{12}+it^{13},\\
+p_7(t)&=t^{14}.
+\end{aligned}
+\tag{1}
+\]
+
+Let \(t_1,\ldots,t_{26}\) be any distinct positive real numbers, and set
+
+\[
+q_j=2\bigl(\overline{p_0(t_j)},\ldots,\overline{p_7(t_j)}\bigr)^T
+\in\mathbb C^8. \tag{2}
+\]
+
+**Theorem.** For all \(x,y\in\mathbb C^8\),
+
+\[
+|q_j^*x|^2=|q_j^*y|^2\quad(1\le j\le26)
+\quad\Longrightarrow\quad y=e^{i\theta}x
+\]
+
+for some real \(\theta\). In particular, take \(t_j=j\); then all entries of the 8-by-26 matrix \(Q=(q_1,\ldots,q_{26})\) are Gaussian integers.
+
+Every $q_j$ is nonzero, since its last entry is $2t_j^{14}$.
+Writing $m_{\mathbb C}(8)$ for the smallest possible number of such
+measurements, the theorem gives $m_{\mathbb C}(8)\le26$. It does not assert
+that 25 measurements are impossible. Each measurement is given by the
+single vector $q_j$ in (2), or equivalently by the rank-one matrix
+$q_jq_j^*$. No more general quadratic measurements are used.
+
+## Why 26 positive samples determine the squared modulus
+
+Put $U=\operatorname{span}_{\mathbb C}(p_0,\ldots,p_7)$ and
+$f_x=\sum_{k=0}^7x_kp_k$. The orders of vanishing of these basis
+polynomials at zero are $0,2,\ldots,14$, and their first coefficients
+are all 1. They are therefore linearly independent: in any nonzero
+linear combination, the term of lowest order cannot cancel. In
+particular $x\mapsto f_x$ is an identification of $\mathbb C^8$ with $U$.
+
+A squared-modulus polynomial has degree at most 28 and would normally
+have 29 real coefficients. The three linear restrictions below explain
+the number 26 in this construction. Here $[t^k]$ means the coefficient
+of $t^k$.
+
+For every \(u\in U\),
+
+\[
+[t^1](uu^\#)=[t^5](uu^\#)=[t^{13}](uu^\#)=0. \tag{3}
+\]
+
+These identities hold for all complex coefficients of \(u\). They can be checked directly from (1), or by verifying that the three coefficients vanish in all products \(p_jp_k^\#\). The exact checker does the latter, checking real and imaginary parts separately. For example, writing \(u=\sum z_jp_j\), its first six coefficients are
+
+\[
+z_0,\ iz_0,\ z_1,\ z_0+\tfrac i2z_1,\ z_2,
+\ 4iz_0-z_1+iz_2.
+\]
+
+Consequently the coefficient of \(t^5\) in its squared-modulus polynomial is
+
+\[
+2\operatorname{Re}\bigl(4i|z_0|^2-z_1\bar z_0+z_0\bar z_1
++\tfrac i2|z_1|^2\bigr)=0.
+\]
+
+To verify the degree-13 cancellation, return to the short vector
+$a$ and the real symmetric matrix $J$ used to assemble (1). The corrected
+low-degree entries are $a+t^8J^{-1}a^\#$, the shifted entries are
+$t^8a$, and the remaining two are $t^6-2it^7$ and $t^{14}$.
+Direct multiplication of the three short polynomials gives
+
+\[
+[t^5](a_i a_j^\#)=0,\qquad [t^5](a_i a_j)=iJ_{ij}.
+\]
+
+In products of two corrected low-degree entries, the coefficient
+of degree 13 comes from the two cross terms. Their coefficient matrices
+are $iJJ^{-1}$ and $-iJ^{-1}J$, whose sum is zero. A product of a first-group entry and a conjugated tail entry has coefficient \([t^5](a_i a_j^\#)=0\). Products involving the middle entry \(t^6-2it^7\) have no degree-13 term: the low portions have degree at most 12, the high portions start at degree 14, and the middle entry's own norm is \(t^{12}+4t^{14}\). The remaining products start beyond degree 13. This proves the three cancellations in (3) directly.
+
+**Lemma 1 (positive sampling).** A nonzero real polynomial with at most \(m\) nonzero monomials has at most \(m-1\) distinct positive zeros.
+
+*Proof.* Induct on \(m\). Divide by its lowest power of \(t\), which does not change positive zeros. The resulting polynomial has a nonzero constant term and at most \(m-1\) other monomials. Its derivative has at most \(m-1\) monomials and therefore at most \(m-2\) distinct positive zeros by induction. Rolle's theorem proves the claim. The case \(m=1\) is immediate. \(\square\)
+
+The space of real polynomials of degree at most 28 with the three
+coefficients in (3) equal to zero has dimension 26. The point of Lemma 1
+is that evaluation at any 26 distinct positive numbers is injective on
+this space; dimension counting alone would not establish that fact.
+
+If the measurements of $x,y$ agree, set $f=\sum x_jp_j$ and
+$g=\sum y_jp_j$. By (2), $q_j^*x=2f(t_j)$ and $q_j^*y=2g(t_j)$,
+so the measurements are four times the corresponding squared moduli. Their difference of squared-modulus polynomials \(ff^\#-gg^\#\) has degree at most 28 and misses the three exponents in (3). It therefore has at most 26 nonzero monomials. It vanishes at the 26 distinct positive sample points, so Lemma 1 gives
+
+\[
+ff^\#=gg^\#. \tag{4}
+\]
+
+It remains to prove that (4) has only proportional solutions in \(U\).
+
+## Comparing two polynomials with the same squared modulus
+
+We now prove that (4) determines a polynomial in $U$ up to common
+phase. The order of vanishing at zero organizes the comparison. The
+nested spaces $\operatorname{span}(p_i,\ldots,p_7)$ consist of the
+elements of $U$ vanishing to order at least $2i$. Every nonzero element
+belongs to exactly one of the differences between successive spaces.
+
+If either polynomial in (4) is zero, both are zero. Otherwise let $i$ be
+the first nonzero basis index of $f$. Its squared-modulus polynomial
+starts in degree $4i$, with coefficient equal to the squared modulus of
+that basis coefficient. The same must be true of $g$. Hence both have
+the same first index and leading coefficients of equal modulus. Multiply
+one by a unit complex number to align these coefficients, and divide
+both by the resulting common nonzero coefficient. The squared-modulus identity is
+preserved, and the coefficients at index $i$ are now both 1.
+
+Set
+
+\[
+v=\frac{f+g}{2},\qquad h=\frac{f-g}{2}.
+\]
+
+At every real $t$, the exact identity
+$|v(t)+h(t)|^2-|v(t)-h(t)|^2=4\operatorname{Re}(h(t)\overline{v(t)})$
+shows what equal measurements require: the average and the difference
+must be perpendicular in the real plane $\mathbb C$ at every parameter.
+This is an equality for the original pair of polynomials, not a
+linear approximation to it. Since their first coefficients have been
+aligned, $h$ vanishes to higher order than $v$. With all parameters
+below real, we can write the following. Here $x_j,y_j$ are new real
+coordinates of the normalized average $v$, not the coordinates of the
+two original signals; $r_j,a_j$ are the real and imaginary coordinates
+of $h$. These $a_j$ are scalar coordinates, unrelated to the short
+polynomials used to assemble the basis in Section 1.
+
+\[
+\begin{aligned}
+v&=p_i+\sum_{j>i}(x_j+iy_j)p_j,\\
+h&=\sum_{j>i}(r_j+ia_j)p_j,\\
+F(t)&:=hv^\#+h^\#v=0.
+\end{aligned}\tag{5}
+\]
+
+The index $i$ ranges over all eight possibilities. In particular,
+we have not assumed that the first coordinate of the original vector
+is nonzero. Nor have we divided by a polynomial or by a measurement
+value. Common factors, repeated zeros, and zero measurement values
+remain within the argument.
+
+The next coefficient distinguishes most of the remaining possibilities.
+After its initial power of $t$ is removed, each $p_j$ starts at 1 and
+has a purely imaginary first derivative. Write this derivative as
+$is_j$. Thus
+
+\[
+p_j=t^{2j}(1+i s_jt)+O(t^{2j+2})
+\]
+
+where the real numbers $s_j$ are
+
+\[
+(s_0,\ldots,s_7)=(1,\tfrac12,1,-2,1,\tfrac12,1,0). \tag{6}
+\]
+
+**Lemma 2 (comparison of the first two coefficients).** If \(h\ne0\) in (5), and \(j\) is its first nonzero index, then \(r_j=0\) and \(s_j=s_i\).
+
+*Proof.* The first two potentially nonzero coefficients of \(F\) are \(2r_j\) and, after \(r_j=0\), \(2(s_i-s_j)a_j\). No larger basis index can contribute to these two degrees. If the slopes differ, both parts of the supposedly first nonzero coefficient vanish, a contradiction. \(\square\)
+
+The lemma says that the first possible nonzero difference has to
+have the same first imaginary derivative as the leading basis element
+of the average. From (6) the complete list is:
+
+| first signal index \(i\) | possible first difference indices |
+|---|---|
+| 0 | 2, 4, 6 |
+| 1 | 5 |
+| 2 | 4, 6 |
+| 3 | none |
+| 4 | 6 |
+| 5, 6, 7 | none |
+
+For $i=3,5,6,7$, no nonzero $h$ is possible. It remains to consider
+$i=0,1,2,4$. The next section gives every equation needed for these
+four cases.
+
+## The coefficient equations force the difference to vanish
+
+For each first index $i$, put
+
+$$
+W_i=\operatorname{span}_{\mathbb C}(p_{i+1},\ldots,p_7),\qquad W_7=\{0\}.
+$$
+
+After normalization we have $v\in p_i+W_i$ and $h\in W_i$.
+For each fixed $v$, consider the real-linear map
+
+$$
+L_v:W_i\longrightarrow\mathbb R[t]_{\le28},\qquad
+L_v(h)=hv^\#+h^\#v,
+$$
+
+where the complex vector space $W_i$ is regarded as a real vector space.
+Our remaining task is to prove $\ker L_v=\{0\}$ for every such $v$.
+Pointwise perpendicularity alone would not imply this: for example,
+$h=icv$ with $c\in\mathbb R$ satisfies $hv^\#+h^\#v=0$. The normalization
+excludes this nonzero constant-phase direction because $h$ has no
+$p_i$ coefficient whereas $v$ has coefficient 1. The rest of the
+argument uses the requirement that $h$ belongs to the fixed polynomial
+space $W_i$.
+
+The low-order coefficients of $L_v(h)$ determine most coordinates of
+$h$ successively; a few higher-order coefficients rule out the remaining
+coordinates. Thus all calculations below concern the kernel of one
+linear map at a time, for an arbitrary normalized average $v$.
+
+Write $E_k=[t^k]F$. To extract any of these equations directly, write
+$v(t)=\sum_\ell v_\ell t^\ell$ and $h(t)=\sum_\ell h_\ell t^\ell$;
+these are ordinary monomial coefficients, with coefficients outside the
+degree range understood to be zero. Then
+
+$$
+E_k=2\operatorname{Re}\sum_{\ell=0}^k
+h_\ell\overline{v_{k-\ell}}.
+$$
+
+After the preceding variables have been determined,
+the equation $E_{2i+2j}=0$ has coefficient 2 on $r_j$ and determines it
+uniquely. The next equation has coefficient $2(s_i-s_j)$ on $a_j$.
+If this number is nonzero, it determines $a_j$ as well. If it is zero,
+we retain $a_j$ and keep any resulting equation as a necessary
+condition. These operations apply to every actual solution of $F=0$.
+
+Every division is by a fixed nonzero rational number, never by a
+variable expression that might vanish for a special signal. Thus no
+exceptional cases are lost. All identities below follow by polynomial
+multiplication and these substitutions. The exact checker reconstructs
+them from (1), but the required equations are displayed here.
+
+The order of the four cases puts the shortest calculations first.
+Most end with a nonzero difference coefficient times a strictly positive
+sum of squares. In the last case two coefficients remain together;
+their two equations form a symmetric matrix with a determinant of
+fixed sign.
+
+### The average starts with $p_4$
+
+By Lemma 2, a nonzero difference can first occur only at index 6.
+In this case write
+
+$$
+\begin{aligned}
+v&=p_4+(x_5+iy_5)p_5+(x_6+iy_6)p_6+(x_7+iy_7)p_7,\\
+h&=(r_6+ia_6)p_6+(r_7+ia_7)p_7.
+\end{aligned}
+$$
+
+Here is the short elimination in full. The first equation is
+$E_{20}=2r_6=0$. With $r_6=0$, the coefficient $E_{21}$ vanishes
+identically because the relevant slopes agree, and the next two are
+
+$$
+E_{22}=2r_7+2a_6y_5,\qquad E_{23}=2a_7-a_6x_5.
+$$
+
+Setting these equal to zero gives
+
+\[
+r_6=0,\qquad r_7=-a_6y_5,\qquad a_7=\tfrac12a_6x_5.
+\]
+
+After these substitutions,
+
+\[
+E_{25}=\frac{a_6}{2}\left(x_5^2+2(y_5-2)^2+8\right). \tag{7}
+\]
+
+The factor in parentheses is strictly positive. Thus \(a_6=0\), and all coefficients of \(h\) vanish.
+
+### The average starts with $p_1$
+
+Only differences starting at 5 need consideration. Eliminating the coefficients of degrees 12 through 17 gives
+
+\[
+r_5=0,\quad r_6=-a_5y_2,\quad a_6=a_5x_2,
+\quad r_7=-a_5y_3,\quad a_7=5a_5x_3.
+\]
+
+The following coefficient is then a particularly useful necessary constraint:
+
+\[
+E_{21}=-2a_5\left(1+x_2^2+y_2^2+10x_3^2+2y_3^2\right). \tag{8}
+\]
+
+It forces \(a_5=0\), hence \(h=0\). Unused coefficients are not presumed to vanish automatically: it is sufficient that every actual solution must satisfy (8).
+
+### The average starts with $p_2$
+
+Start with differences at 4 or later. Processing degrees 12 through 16 gives
+
+\[
+\begin{aligned}
+r_4&=0,\\
+r_5&=-a_4y_3,\\
+a_5&=6a_4x_3,\\
+r_6&=a_4\left(-1-y_4+\tfrac52y_3-5x_3y_3\right).
+\end{aligned}
+\]
+
+The degree-17 equation is
+
+\[
+E_{17}=-a_4\left(30x_3^2+5(y_3-\tfrac25)^2+\tfrac{46}{5}\right). \tag{9}
+\]
+
+Thus \(a_4=0\), and the coefficients of \(h\) at 4 and 5 are zero. Restarting with a possible difference at 6, degrees 16 through 19 give
+
+\[
+r_6=0,\qquad r_7=-a_6y_3,\qquad a_7=3a_6x_3.
+\]
+
+Now
+
+\[
+E_{21}=-2a_6(1+6x_3^2+2y_3^2). \tag{10}
+\]
+
+Hence \(a_6=0\), and again \(h=0\).
+
+### The average starts with $p_0$: the first possible difference
+
+Process degrees 2 through 8. The solved variables are
+
+\[
+\begin{aligned}
+r_1=a_1=r_2&=0,\\
+r_3&=-a_2y_1,\qquad a_3=\tfrac16a_2x_1,\\
+r_4&=a_2\left(1-y_2-\tfrac52y_1+\tfrac56x_1y_1\right).
+\end{aligned}
+\]
+
+The degree-9 coefficient becomes
+
+\[
+E_9=a_2\left(\tfrac56x_1^2+5(y_1-\tfrac25)^2+\tfrac{46}{5}\right). \tag{11}
+\]
+
+It follows that \(a_2=0\). Consequently every coefficient of \(h\) before index 4 is zero.
+
+### The average starts with $p_0$: the last two coefficients
+
+Now start \(h\) at index 4. The coefficients of degrees 8 through 15 give
+
+\[
+\begin{aligned}
+r_4&=0,& r_5&=-a_4y_1,&a_5&=a_4x_1,\\
+r_6&=-a_4y_2,\\
+r_7&=-a_4y_3-a_6y_1+a_4x_2y_1,\\
+a_7&=3a_4x_3+\tfrac12a_6x_1-\tfrac12a_4x_1x_2.
+\end{aligned}\tag{12}
+\]
+
+There are two remaining independent imaginary difference variables, \(a_4,a_6\). Introduce the real polynomials
+
+\[
+\begin{aligned}
+R&=x_1^2+2(y_1-2)^2+8,\\
+T&=-2x_1x_3-4y_1y_3-2x_2,\\
+S&=-1-x_1^2-y_1^2-6x_3^2-2y_3^2-x_2^2-y_2^2,\\
+\rho&=a_6-a_4x_2.
+\end{aligned}\tag{13}
+\]
+
+After (12), direct coefficient extraction gives
+
+\[
+E_{17}=\frac{R\rho+2a_4T}{2},\qquad
+E_{21}=2a_4S+T\rho. \tag{14}
+\]
+
+The last two equations have a simple two-dimensional meaning.
+In the coordinates $(2a_4,\rho)$ for the remaining difference, (14) reads
+
+$$
+\begin{pmatrix} S&T\\ T&R\end{pmatrix}
+\begin{pmatrix}2a_4\\ \rho\end{pmatrix}
+=\begin{pmatrix}E_{21}\\2E_{17}\end{pmatrix}.
+$$
+
+The two diagonal entries have fixed opposite signs: $S\le-1$ and
+$R\ge8$. The associated quadratic form is therefore negative on one
+coordinate axis and positive on the other. In this two-dimensional
+system the off-diagonal entry $T$, whatever its sign, contributes
+$-T^2$ to the determinant. Hence $RS-T^2\le-8$, and the matrix is
+invertible for every average $v$.
+
+The same argument can be written as a scalar elimination identity,
+with no division by the determinant:
+
+\[
+\boxed{R E_{21}-2T E_{17}=2a_4(RS-T^2).}\tag{15}
+\]
+
+For a pair with equal squared moduli, $E_{17}=E_{21}=0$, so (15)
+forces $a_4=0$. Multiplying the same identity by $-a_4$ gives its
+quantitative form:
+
+\[
+-a_4(RE_{21}-2TE_{17})=2a_4^2(R(-S)+T^2)\ge16a_4^2.
+\]
+
+This inequality applies to either sign of $a_4$. With $a_4=0$, the
+first equation in (14) gives $a_6=0$, and (12) makes every remaining
+coefficient of $h$ zero.
+
+Both rows of the two-by-two system are coefficients of the same
+polynomial $F$, for the same average $v$ and difference $h$. Thus their
+joint use applies to every candidate pair in (4). The remaining
+coefficients of $F$ need not be solved: every actual solution must
+satisfy the equations already used, and those equations force $h=0$.
+
+## Conclusion and the equivalent matrix statement
+
+All eight possible first signal indices have been covered. In every case \(h=0\), so after normalization \(f=g\). Undoing that normalization gives precisely a common unit phase. Section 2 then proves the finite-measurement theorem.
+
+For completeness, the conclusion can also be expressed entirely in
+terms of Hermitian matrices. Define the real-linear map
+$\mathcal A_Q(H)=(q_j^*Hq_j)_{j=1}^{26}$ on the Hermitian $8$-by-$8$
+matrices. Equality of the measurements of $x$ and $y$ is exactly the
+equation $\mathcal A_Q(xx^*-yy^*)=0$.
+
+The columns of $Q$ span $\mathbb C^8$: a vector perpendicular to them
+would give a polynomial in $U$ vanishing at 26 distinct points, hence
+the zero polynomial since its degree is at most 14. If a positive
+semidefinite Hermitian matrix $H$ belongs to the kernel of
+$\mathcal A_Q$, each $q_j^*Hq_j=0$ implies $Hq_j=0$. Spanning then
+gives $H=0$. The same applies after changing the sign of a negative
+semidefinite matrix. Finally, every indefinite Hermitian matrix of rank
+two can be written as $xx^*-yy^*$ with $x,y$ not proportional, by its
+spectral decomposition. The theorem has excluded precisely these
+remaining possibilities. Therefore
+
+\[
+\ker\mathcal A_Q\cap\{H=H^*:0<\operatorname{rank}H\le2\}=\varnothing.
+\]
+
+\begingroup\small
+
+## Scope and verification
+
+The proof uses only the displayed polynomials, coefficient conjugation,
+elementary real inequalities, the normalization by the first nonzero
+coefficient, and Rolle's theorem. It does not depend on any prior unpublished
+classification or obstruction claim. The construction was motivated by
+choosing $t^{14}$, a polynomial with a repeated root, as an element shared
+by $U$ and $U^\#$, where $U^\#=\{f^\#:f\in U\}$.
+No theory of such spaces is needed here.
+
+The result concerns the specified frames and gives $m_{\mathbb C}(8)\le26$.
+It asserts neither optimality nor success for every or generic 26-vector
+frame. Numerical conditioning and a practical reconstruction algorithm
+with noise guarantees have not been established.
+
+The supplementary archive provides the exact Gaussian-integer matrix
+`PR26_FRAME_QI.json`, the paper's sources, both verification implementations,
+and their logs. The original standard-library implementation uses exact
+rational arithmetic. An isolated rerun passed all 336 polynomial checks,
+seven matrix checks, and two negative controls, with mathematical results
+matching the supplied logs. These checks include the three missing
+coefficients, all substitutions and case identities, the actual frame
+entries, and rank calculations modulo a prime.
+
+A separate SymPy implementation transcribes (1) without importing code from
+the original verifier. Its 633 finite checks passed: all 64 complex
+products, all 28 possible first-index pairs, the substitutions by fixed
+nonzero coefficients, the strict-sign identities, and all 208 matrix
+entries. The newly displayed symmetric two-by-two formulation is just a
+rearrangement of (14); its determinant agrees with (15). A separately
+supplied Wolfram log reports agreement for the three missing coefficients
+and eight principal coefficient identities and their combinations; that engine was
+not rerun during the local review.
+
+The sampling argument, normalization, and case coverage have received a
+local logical review. Computational check counts do not count independent
+mathematical proofs. This is a proof candidate for critical examination:
+external independent expert review and proof-assistant verification have
+not been completed.
+
+The mathematics, exploration, and verification were developed with
+substantial AI assistance. Detailed research records are retained
+separately. The complete proposed proof is given here, and the exact
+input and reproducibility scripts accompany it.
+
+\endgroup

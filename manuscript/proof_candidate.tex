@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\newcounter{none}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,
+pdftitle={An Explicit 26-Measurement Phase-Retrieving Frame in C8: Proof Candidate}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{0.35em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Explicit phase retrieval in $\mathbb C^8$}
+\fancyhead[R]{\small Proof Candidate}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\title{An Explicit 26-Measurement\\Phase-Retrieving Frame in $\mathbb C^8$\\[0.6em]
+\large Proof Candidate}
+\input{author_metadata.tex}
+\date{19 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Can 26 squared absolute values of complex linear functionals distinguish
+every vector in $\mathbb C^8$ up to a common phase? We give an explicit
+Gaussian-integer construction and a self-contained candidate proof that
+they can. A vector is represented by a polynomial in a specified
+eight-dimensional space. Three missing coefficients make 26 positive
+samples determine its squared modulus. To show that the polynomial is
+then determined up to phase, we compare two possible solutions through
+their average and difference. Equal moduli impose pointwise real
+orthogonality. Successive coefficients reduce this condition to positive
+sums of squares and, in the last case, a real symmetric two-by-two
+matrix whose determinant is strictly negative. The claimed conclusion
+is $m_{\mathbb C}(8)\le26$, with no assertion of optimality.
+The identities and frame entries have passed local review and separate
+exact symbolic checks; external independent expert review is pending.
+\end{abstract}
+\noindent\textbf{Status.} Proof candidate for examination; not peer reviewed.
+The complete proposed proof and exact input are given below and in the
+supplementary reproducibility archive.
+\medskip
+\input{proof_body.tex}
+\end{document}

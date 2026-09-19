@@ -1,0 +1,1393 @@
+{
+  "status": "PASS",
+  "engine": "Python Fraction sparse polynomial convolution; no SymPy or other CAS imported",
+  "checks": [
+    "missing 1: 0,0,re",
+    "missing 5: 0,0,re",
+    "missing 13: 0,0,re",
+    "missing 1: 0,0,im",
+    "missing 5: 0,0,im",
+    "missing 13: 0,0,im",
+    "missing 1: 0,1,re",
+    "missing 5: 0,1,re",
+    "missing 13: 0,1,re",
+    "missing 1: 0,1,im",
+    "missing 5: 0,1,im",
+    "missing 13: 0,1,im",
+    "missing 1: 0,2,re",
+    "missing 5: 0,2,re",
+    "missing 13: 0,2,re",
+    "missing 1: 0,2,im",
+    "missing 5: 0,2,im",
+    "missing 13: 0,2,im",
+    "missing 1: 0,3,re",
+    "missing 5: 0,3,re",
+    "missing 13: 0,3,re",
+    "missing 1: 0,3,im",
+    "missing 5: 0,3,im",
+    "missing 13: 0,3,im",
+    "missing 1: 0,4,re",
+    "missing 5: 0,4,re",
+    "missing 13: 0,4,re",
+    "missing 1: 0,4,im",
+    "missing 5: 0,4,im",
+    "missing 13: 0,4,im",
+    "missing 1: 0,5,re",
+    "missing 5: 0,5,re",
+    "missing 13: 0,5,re",
+    "missing 1: 0,5,im",
+    "missing 5: 0,5,im",
+    "missing 13: 0,5,im",
+    "missing 1: 0,6,re",
+    "missing 5: 0,6,re",
+    "missing 13: 0,6,re",
+    "missing 1: 0,6,im",
+    "missing 5: 0,6,im",
+    "missing 13: 0,6,im",
+    "missing 1: 0,7,re",
+    "missing 5: 0,7,re",
+    "missing 13: 0,7,re",
+    "missing 1: 0,7,im",
+    "missing 5: 0,7,im",
+    "missing 13: 0,7,im",
+    "missing 1: 1,1,re",
+    "missing 5: 1,1,re",
+    "missing 13: 1,1,re",
+    "missing 1: 1,1,im",
+    "missing 5: 1,1,im",
+    "missing 13: 1,1,im",
+    "missing 1: 1,2,re",
+    "missing 5: 1,2,re",
+    "missing 13: 1,2,re",
+    "missing 1: 1,2,im",
+    "missing 5: 1,2,im",
+    "missing 13: 1,2,im",
+    "missing 1: 1,3,re",
+    "missing 5: 1,3,re",
+    "missing 13: 1,3,re",
+    "missing 1: 1,3,im",
+    "missing 5: 1,3,im",
+    "missing 13: 1,3,im",
+    "missing 1: 1,4,re",
+    "missing 5: 1,4,re",
+    "missing 13: 1,4,re",
+    "missing 1: 1,4,im",
+    "missing 5: 1,4,im",
+    "missing 13: 1,4,im",
+    "missing 1: 1,5,re",
+    "missing 5: 1,5,re",
+    "missing 13: 1,5,re",
+    "missing 1: 1,5,im",
+    "missing 5: 1,5,im",
+    "missing 13: 1,5,im",
+    "missing 1: 1,6,re",
+    "missing 5: 1,6,re",
+    "missing 13: 1,6,re",
+    "missing 1: 1,6,im",
+    "missing 5: 1,6,im",
+    "missing 13: 1,6,im",
+    "missing 1: 1,7,re",
+    "missing 5: 1,7,re",
+    "missing 13: 1,7,re",
+    "missing 1: 1,7,im",
+    "missing 5: 1,7,im",
+    "missing 13: 1,7,im",
+    "missing 1: 2,2,re",
+    "missing 5: 2,2,re",
+    "missing 13: 2,2,re",
+    "missing 1: 2,2,im",
+    "missing 5: 2,2,im",
+    "missing 13: 2,2,im",
+    "missing 1: 2,3,re",
+    "missing 5: 2,3,re",
+    "missing 13: 2,3,re",
+    "missing 1: 2,3,im",
+    "missing 5: 2,3,im",
+    "missing 13: 2,3,im",
+    "missing 1: 2,4,re",
+    "missing 5: 2,4,re",
+    "missing 13: 2,4,re",
+    "missing 1: 2,4,im",
+    "missing 5: 2,4,im",
+    "missing 13: 2,4,im",
+    "missing 1: 2,5,re",
+    "missing 5: 2,5,re",
+    "missing 13: 2,5,re",
+    "missing 1: 2,5,im",
+    "missing 5: 2,5,im",
+    "missing 13: 2,5,im",
+    "missing 1: 2,6,re",
+    "missing 5: 2,6,re",
+    "missing 13: 2,6,re",
+    "missing 1: 2,6,im",
+    "missing 5: 2,6,im",
+    "missing 13: 2,6,im",
+    "missing 1: 2,7,re",
+    "missing 5: 2,7,re",
+    "missing 13: 2,7,re",
+    "missing 1: 2,7,im",
+    "missing 5: 2,7,im",
+    "missing 13: 2,7,im",
+    "missing 1: 3,3,re",
+    "missing 5: 3,3,re",
+    "missing 13: 3,3,re",
+    "missing 1: 3,3,im",
+    "missing 5: 3,3,im",
+    "missing 13: 3,3,im",
+    "missing 1: 3,4,re",
+    "missing 5: 3,4,re",
+    "missing 13: 3,4,re",
+    "missing 1: 3,4,im",
+    "missing 5: 3,4,im",
+    "missing 13: 3,4,im",
+    "missing 1: 3,5,re",
+    "missing 5: 3,5,re",
+    "missing 13: 3,5,re",
+    "missing 1: 3,5,im",
+    "missing 5: 3,5,im",
+    "missing 13: 3,5,im",
+    "missing 1: 3,6,re",
+    "missing 5: 3,6,re",
+    "missing 13: 3,6,re",
+    "missing 1: 3,6,im",
+    "missing 5: 3,6,im",
+    "missing 13: 3,6,im",
+    "missing 1: 3,7,re",
+    "missing 5: 3,7,re",
+    "missing 13: 3,7,re",
+    "missing 1: 3,7,im",
+    "missing 5: 3,7,im",
+    "missing 13: 3,7,im",
+    "missing 1: 4,4,re",
+    "missing 5: 4,4,re",
+    "missing 13: 4,4,re",
+    "missing 1: 4,4,im",
+    "missing 5: 4,4,im",
+    "missing 13: 4,4,im",
+    "missing 1: 4,5,re",
+    "missing 5: 4,5,re",
+    "missing 13: 4,5,re",
+    "missing 1: 4,5,im",
+    "missing 5: 4,5,im",
+    "missing 13: 4,5,im",
+    "missing 1: 4,6,re",
+    "missing 5: 4,6,re",
+    "missing 13: 4,6,re",
+    "missing 1: 4,6,im",
+    "missing 5: 4,6,im",
+    "missing 13: 4,6,im",
+    "missing 1: 4,7,re",
+    "missing 5: 4,7,re",
+    "missing 13: 4,7,re",
+    "missing 1: 4,7,im",
+    "missing 5: 4,7,im",
+    "missing 13: 4,7,im",
+    "missing 1: 5,5,re",
+    "missing 5: 5,5,re",
+    "missing 13: 5,5,re",
+    "missing 1: 5,5,im",
+    "missing 5: 5,5,im",
+    "missing 13: 5,5,im",
+    "missing 1: 5,6,re",
+    "missing 5: 5,6,re",
+    "missing 13: 5,6,re",
+    "missing 1: 5,6,im",
+    "missing 5: 5,6,im",
+    "missing 13: 5,6,im",
+    "missing 1: 5,7,re",
+    "missing 5: 5,7,re",
+    "missing 13: 5,7,re",
+    "missing 1: 5,7,im",
+    "missing 5: 5,7,im",
+    "missing 13: 5,7,im",
+    "missing 1: 6,6,re",
+    "missing 5: 6,6,re",
+    "missing 13: 6,6,re",
+    "missing 1: 6,6,im",
+    "missing 5: 6,6,im",
+    "missing 13: 6,6,im",
+    "missing 1: 6,7,re",
+    "missing 5: 6,7,re",
+    "missing 13: 6,7,re",
+    "missing 1: 6,7,im",
+    "missing 5: 6,7,im",
+    "missing 13: 6,7,im",
+    "missing 1: 7,7,re",
+    "missing 5: 7,7,re",
+    "missing 13: 7,7,re",
+    "missing 1: 7,7,im",
+    "missing 5: 7,7,im",
+    "missing 13: 7,7,im",
+    "case0_first: linear pivot r1",
+    "case0_first: solved coefficient 2",
+    "case0_first: linear pivot a1",
+    "case0_first: solved coefficient 3",
+    "case0_first: linear pivot r2",
+    "case0_first: solved coefficient 4",
+    "case0_first: linear pivot r3",
+    "case0_first: solved coefficient 6",
+    "case0_first: linear pivot a3",
+    "case0_first: solved coefficient 7",
+    "case0_first: linear pivot r4",
+    "case0_first: solved coefficient 8",
+    "case0 degree9 exact gate",
+    "case0 G positive decomposition",
+    "case0_remaining: linear pivot r4",
+    "case0_remaining: solved coefficient 8",
+    "case0_remaining: linear pivot r5",
+    "case0_remaining: solved coefficient 10",
+    "case0_remaining: linear pivot a5",
+    "case0_remaining: solved coefficient 11",
+    "case0_remaining: linear pivot r6",
+    "case0_remaining: solved coefficient 12",
+    "case0_remaining: linear pivot r7",
+    "case0_remaining: solved coefficient 14",
+    "case0_remaining: linear pivot a7",
+    "case0_remaining: solved coefficient 15",
+    "case0 degree17 exact gate",
+    "case0 degree21 exact gate",
+    "case0 combined negative identity",
+    "case1: linear pivot r5",
+    "case1: solved coefficient 12",
+    "case1: linear pivot r6",
+    "case1: solved coefficient 14",
+    "case1: linear pivot a6",
+    "case1: solved coefficient 15",
+    "case1: linear pivot r7",
+    "case1: solved coefficient 16",
+    "case1: linear pivot a7",
+    "case1: solved coefficient 17",
+    "case1 degree21 exact negative gate",
+    "case2_first: linear pivot r4",
+    "case2_first: solved coefficient 12",
+    "case2_first: linear pivot r5",
+    "case2_first: solved coefficient 14",
+    "case2_first: linear pivot a5",
+    "case2_first: solved coefficient 15",
+    "case2_first: linear pivot r6",
+    "case2_first: solved coefficient 16",
+    "case2_first: linear pivot r7",
+    "case2_first: solved coefficient 18",
+    "case2_first: linear pivot a7",
+    "case2_first: solved coefficient 19",
+    "case2 degree17 negative gate",
+    "case2 positive decomposition",
+    "case2_remaining: linear pivot r6",
+    "case2_remaining: solved coefficient 16",
+    "case2_remaining: linear pivot r7",
+    "case2_remaining: solved coefficient 18",
+    "case2_remaining: linear pivot a7",
+    "case2_remaining: solved coefficient 19",
+    "case2 degree21 negative gate",
+    "case4: linear pivot r6",
+    "case4: solved coefficient 20",
+    "case4: linear pivot r7",
+    "case4: solved coefficient 22",
+    "case4: linear pivot a7",
+    "case4: solved coefficient 23",
+    "case4 degree25 positive gate",
+    "leading basis order 0",
+    "leading basis slope 0",
+    "degree bound 0",
+    "leading basis order 1",
+    "leading basis slope 1",
+    "degree bound 1",
+    "leading basis order 2",
+    "leading basis slope 2",
+    "degree bound 2",
+    "leading basis order 3",
+    "leading basis slope 3",
+    "degree bound 3",
+    "leading basis order 4",
+    "leading basis slope 4",
+    "degree bound 4",
+    "leading basis order 5",
+    "leading basis slope 5",
+    "degree bound 5",
+    "leading basis order 6",
+    "leading basis slope 6",
+    "degree bound 6",
+    "leading basis order 7",
+    "leading basis slope 7",
+    "degree bound 7",
+    "case0_first: zero-difference closure r1",
+    "case0_first: zero-difference closure a1",
+    "case0_first: zero-difference closure r2",
+    "case0_first: zero-difference closure r3",
+    "case0_first: zero-difference closure a3",
+    "case0_first: zero-difference closure r4",
+    "case0_remaining: zero-difference closure r4",
+    "case0_remaining: zero-difference closure r5",
+    "case0_remaining: zero-difference closure a5",
+    "case0_remaining: zero-difference closure r6",
+    "case0_remaining: zero-difference closure r7",
+    "case0_remaining: zero-difference closure a7",
+    "case1: zero-difference closure r5",
+    "case1: zero-difference closure r6",
+    "case1: zero-difference closure a6",
+    "case1: zero-difference closure r7",
+    "case1: zero-difference closure a7",
+    "case2_first: zero-difference closure r4",
+    "case2_first: zero-difference closure r5",
+    "case2_first: zero-difference closure a5",
+    "case2_first: zero-difference closure r6",
+    "case2_remaining: zero-difference closure r6",
+    "case2_remaining: zero-difference closure r7",
+    "case2_remaining: zero-difference closure a7",
+    "case4: zero-difference closure r6",
+    "case4: zero-difference closure r7",
+    "case4: zero-difference closure a7",
+    "slope layer cover"
+  ],
+  "count": 336,
+  "slope_matches": {
+    "0": [
+      2,
+      4,
+      6
+    ],
+    "1": [
+      5
+    ],
+    "2": [
+      4,
+      6
+    ],
+    "3": [],
+    "4": [
+      6
+    ],
+    "5": [],
+    "6": [],
+    "7": []
+  },
+  "identities": {
+    "case0_first_substitutions": {
+      "r1": [],
+      "a1": [],
+      "r2": [],
+      "r3": [
+        [
+          "-1",
+          {
+            "y1": 1,
+            "a2": 1
+          }
+        ]
+      ],
+      "a3": [
+        [
+          "1/6",
+          {
+            "x1": 1,
+            "a2": 1
+          }
+        ]
+      ],
+      "r4": [
+        [
+          "1",
+          {
+            "a2": 1
+          }
+        ],
+        [
+          "-1",
+          {
+            "y2": 1,
+            "a2": 1
+          }
+        ],
+        [
+          "-5/2",
+          {
+            "y1": 1,
+            "a2": 1
+          }
+        ],
+        [
+          "5/6",
+          {
+            "x1": 1,
+            "y1": 1,
+            "a2": 1
+          }
+        ]
+      ]
+    },
+    "case0_G": [
+      [
+        "10",
+        {}
+      ],
+      [
+        "-4",
+        {
+          "y1": 1
+        }
+      ],
+      [
+        "5",
+        {
+          "y1": 2
+        }
+      ],
+      [
+        "5/6",
+        {
+          "x1": 2
+        }
+      ]
+    ],
+    "case0_remaining_substitutions": {
+      "r4": [],
+      "r5": [
+        [
+          "-1",
+          {
+            "y1": 1,
+            "a4": 1
+          }
+        ]
+      ],
+      "a5": [
+        [
+          "1",
+          {
+            "x1": 1,
+            "a4": 1
+          }
+        ]
+      ],
+      "r6": [
+        [
+          "-1",
+          {
+            "y2": 1,
+            "a4": 1
+          }
+        ]
+      ],
+      "r7": [
+        [
+          "-1",
+          {
+            "y3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "-1",
+          {
+            "y1": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "1",
+          {
+            "x2": 1,
+            "y1": 1,
+            "a4": 1
+          }
+        ]
+      ],
+      "a7": [
+        [
+          "3",
+          {
+            "x3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "1/2",
+          {
+            "x1": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "-1/2",
+          {
+            "x1": 1,
+            "x2": 1,
+            "a4": 1
+          }
+        ]
+      ]
+    },
+    "case0_combined": {
+      "R": [
+        [
+          "16",
+          {}
+        ],
+        [
+          "-8",
+          {
+            "y1": 1
+          }
+        ],
+        [
+          "2",
+          {
+            "y1": 2
+          }
+        ],
+        [
+          "1",
+          {
+            "x1": 2
+          }
+        ]
+      ],
+      "T": [
+        [
+          "-4",
+          {
+            "y1": 1,
+            "y3": 1
+          }
+        ],
+        [
+          "-2",
+          {
+            "x2": 1
+          }
+        ],
+        [
+          "-2",
+          {
+            "x1": 1,
+            "x3": 1
+          }
+        ]
+      ],
+      "S": [
+        [
+          "-1",
+          {}
+        ],
+        [
+          "-2",
+          {
+            "y3": 2
+          }
+        ],
+        [
+          "-1",
+          {
+            "y2": 2
+          }
+        ],
+        [
+          "-1",
+          {
+            "y1": 2
+          }
+        ],
+        [
+          "-6",
+          {
+            "x3": 2
+          }
+        ],
+        [
+          "-1",
+          {
+            "x2": 2
+          }
+        ],
+        [
+          "-1",
+          {
+            "x1": 2
+          }
+        ]
+      ],
+      "E17": [
+        [
+          "8",
+          {
+            "a6": 1
+          }
+        ],
+        [
+          "-4",
+          {
+            "y1": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "-4",
+          {
+            "y1": 1,
+            "y3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "1",
+          {
+            "y1": 2,
+            "a6": 1
+          }
+        ],
+        [
+          "-10",
+          {
+            "x2": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "4",
+          {
+            "x2": 1,
+            "y1": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "-1",
+          {
+            "x2": 1,
+            "y1": 2,
+            "a4": 1
+          }
+        ],
+        [
+          "-2",
+          {
+            "x1": 1,
+            "x3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "1/2",
+          {
+            "x1": 2,
+            "a6": 1
+          }
+        ],
+        [
+          "-1/2",
+          {
+            "x1": 2,
+            "x2": 1,
+            "a4": 1
+          }
+        ]
+      ],
+      "E21": [
+        [
+          "-2",
+          {
+            "a4": 1
+          }
+        ],
+        [
+          "-4",
+          {
+            "y3": 2,
+            "a4": 1
+          }
+        ],
+        [
+          "-2",
+          {
+            "y2": 2,
+            "a4": 1
+          }
+        ],
+        [
+          "-4",
+          {
+            "y1": 1,
+            "y3": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "-2",
+          {
+            "y1": 2,
+            "a4": 1
+          }
+        ],
+        [
+          "-12",
+          {
+            "x3": 2,
+            "a4": 1
+          }
+        ],
+        [
+          "-2",
+          {
+            "x2": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "4",
+          {
+            "x2": 1,
+            "y1": 1,
+            "y3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "-2",
+          {
+            "x1": 1,
+            "x3": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "2",
+          {
+            "x1": 1,
+            "x2": 1,
+            "x3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "-2",
+          {
+            "x1": 2,
+            "a4": 1
+          }
+        ]
+      ]
+    },
+    "case1_substitutions": {
+      "r5": [],
+      "r6": [
+        [
+          "-1",
+          {
+            "y2": 1,
+            "a5": 1
+          }
+        ]
+      ],
+      "a6": [
+        [
+          "1",
+          {
+            "x2": 1,
+            "a5": 1
+          }
+        ]
+      ],
+      "r7": [
+        [
+          "-1",
+          {
+            "y3": 1,
+            "a5": 1
+          }
+        ]
+      ],
+      "a7": [
+        [
+          "5",
+          {
+            "x3": 1,
+            "a5": 1
+          }
+        ]
+      ]
+    },
+    "case1_G": [
+      [
+        "-1",
+        {}
+      ],
+      [
+        "-2",
+        {
+          "y3": 2
+        }
+      ],
+      [
+        "-1",
+        {
+          "y2": 2
+        }
+      ],
+      [
+        "-10",
+        {
+          "x3": 2
+        }
+      ],
+      [
+        "-1",
+        {
+          "x2": 2
+        }
+      ]
+    ],
+    "case2_first_substitutions": {
+      "r4": [],
+      "r5": [
+        [
+          "-1",
+          {
+            "y3": 1,
+            "a4": 1
+          }
+        ]
+      ],
+      "a5": [
+        [
+          "6",
+          {
+            "x3": 1,
+            "a4": 1
+          }
+        ]
+      ],
+      "r6": [
+        [
+          "-1",
+          {
+            "a4": 1
+          }
+        ],
+        [
+          "-1",
+          {
+            "y4": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "5/2",
+          {
+            "y3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "-5",
+          {
+            "x3": 1,
+            "y3": 1,
+            "a4": 1
+          }
+        ]
+      ],
+      "r7": [
+        [
+          "1",
+          {
+            "a4": 1
+          }
+        ],
+        [
+          "-1",
+          {
+            "y5": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "-1",
+          {
+            "y3": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "-2",
+          {
+            "y3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "1",
+          {
+            "x4": 1,
+            "y3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "9",
+          {
+            "x3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "-5",
+          {
+            "x3": 1,
+            "y4": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "15/2",
+          {
+            "x3": 1,
+            "y3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "5",
+          {
+            "x3": 2,
+            "y3": 1,
+            "a4": 1
+          }
+        ]
+      ],
+      "a7": [
+        [
+          "-2",
+          {
+            "y4": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "3",
+          {
+            "y3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "5/2",
+          {
+            "y3": 1,
+            "y4": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "-15/2",
+          {
+            "y3": 2,
+            "a4": 1
+          }
+        ],
+        [
+          "1/2",
+          {
+            "x5": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "3",
+          {
+            "x3": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "17/2",
+          {
+            "x3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "5",
+          {
+            "x3": 1,
+            "y3": 1,
+            "a4": 1
+          }
+        ],
+        [
+          "15",
+          {
+            "x3": 1,
+            "y3": 2,
+            "a4": 1
+          }
+        ],
+        [
+          "-3",
+          {
+            "x3": 1,
+            "x4": 1,
+            "a4": 1
+          }
+        ]
+      ]
+    },
+    "case2_remaining_substitutions": {
+      "r6": [],
+      "r7": [
+        [
+          "-1",
+          {
+            "y3": 1,
+            "a6": 1
+          }
+        ]
+      ],
+      "a7": [
+        [
+          "3",
+          {
+            "x3": 1,
+            "a6": 1
+          }
+        ]
+      ]
+    },
+    "case2_G": [
+      [
+        "-1",
+        {}
+      ],
+      [
+        "-2",
+        {
+          "y3": 2
+        }
+      ],
+      [
+        "-6",
+        {
+          "x3": 2
+        }
+      ]
+    ],
+    "case4_substitutions": {
+      "r6": [],
+      "r7": [
+        [
+          "-1",
+          {
+            "y5": 1,
+            "a6": 1
+          }
+        ]
+      ],
+      "a7": [
+        [
+          "1/2",
+          {
+            "x5": 1,
+            "a6": 1
+          }
+        ]
+      ]
+    },
+    "case4_orthogonality": {
+      "24": [
+        [
+          "-2",
+          {
+            "a6": 1
+          }
+        ],
+        [
+          "2",
+          {
+            "y6": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "1",
+          {
+            "y5": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "-1",
+          {
+            "x5": 1,
+            "y5": 1,
+            "a6": 1
+          }
+        ]
+      ],
+      "25": [
+        [
+          "8",
+          {
+            "a6": 1
+          }
+        ],
+        [
+          "-4",
+          {
+            "y5": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "1",
+          {
+            "y5": 2,
+            "a6": 1
+          }
+        ],
+        [
+          "1/2",
+          {
+            "x5": 2,
+            "a6": 1
+          }
+        ]
+      ],
+      "26": [
+        [
+          "2",
+          {
+            "y7": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "2",
+          {
+            "y6": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "-2",
+          {
+            "x6": 1,
+            "y5": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "2",
+          {
+            "x5": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "1",
+          {
+            "x5": 1,
+            "y6": 1,
+            "a6": 1
+          }
+        ]
+      ],
+      "27": [
+        [
+          "2",
+          {
+            "y5": 1,
+            "y6": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "-2",
+          {
+            "x7": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "4",
+          {
+            "x5": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "1",
+          {
+            "x5": 1,
+            "y5": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "1",
+          {
+            "x5": 1,
+            "x6": 1,
+            "a6": 1
+          }
+        ]
+      ],
+      "28": [
+        [
+          "-2",
+          {
+            "x7": 1,
+            "y5": 1,
+            "a6": 1
+          }
+        ],
+        [
+          "1",
+          {
+            "x5": 1,
+            "y7": 1,
+            "a6": 1
+          }
+        ]
+      ]
+    }
+  },
+  "coefficient_table": [
+    {
+      "0": [
+        "1",
+        "0"
+      ],
+      "1": [
+        "0",
+        "1"
+      ],
+      "3": [
+        "1",
+        "0"
+      ],
+      "5": [
+        "0",
+        "4"
+      ],
+      "12": [
+        "1/2",
+        "0"
+      ],
+      "13": [
+        "0",
+        "-1/2"
+      ]
+    },
+    {
+      "2": [
+        "1",
+        "0"
+      ],
+      "3": [
+        "0",
+        "1/2"
+      ],
+      "5": [
+        "-1",
+        "0"
+      ],
+      "10": [
+        "1",
+        "0"
+      ],
+      "11": [
+        "0",
+        "-1/2"
+      ],
+      "13": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "4": [
+        "1",
+        "0"
+      ],
+      "5": [
+        "0",
+        "1"
+      ],
+      "8": [
+        "1/2",
+        "0"
+      ],
+      "9": [
+        "0",
+        "-1/2"
+      ],
+      "11": [
+        "1/2",
+        "0"
+      ],
+      "12": [
+        "-2",
+        "0"
+      ]
+    },
+    {
+      "6": [
+        "1",
+        "0"
+      ],
+      "7": [
+        "0",
+        "-2"
+      ]
+    },
+    {
+      "8": [
+        "1",
+        "0"
+      ],
+      "9": [
+        "0",
+        "1"
+      ],
+      "11": [
+        "1",
+        "0"
+      ],
+      "13": [
+        "0",
+        "4"
+      ]
+    },
+    {
+      "10": [
+        "1",
+        "0"
+      ],
+      "11": [
+        "0",
+        "1/2"
+      ],
+      "13": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "12": [
+        "1",
+        "0"
+      ],
+      "13": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "14": [
+        "1",
+        "0"
+      ]
+    }
+  ],
+  "elapsed_seconds": 0.383075625,
+  "scope": "exact coefficient identities; completeness of normalization, cases, and evaluation inference must be justified in proof"
+}

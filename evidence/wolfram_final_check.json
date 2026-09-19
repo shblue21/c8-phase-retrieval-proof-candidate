@@ -1,0 +1,9 @@
+{
+  "source": "Actual Wolfram.WolframLanguageEvaluator call during this research, not a locally simulated Wolfram result",
+  "MissingProductCoefficients": true,
+  "EightGateIdentities": [true, true, true, true, true, true, true, true],
+  "AllPass": true,
+  "scope": "Separate symbolic engine confirmation of coefficient identities. Does not constitute independent expert review or formal verification of the full mathematical argument.",
+  "input_file": "code/VERIFY_WOLFRAM.wl",
+  "file_wrapper_note": "The file adds a result assignment and Print wrapper to the mathematical input used in the tool call."
+}

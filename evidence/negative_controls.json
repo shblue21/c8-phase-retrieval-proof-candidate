@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "checks": [
+    "A real t5 perturbation is detected: orthogonality coefficient changes to 4",
+    "Zero-mixing comparison family has exact nonproportional collision p0+i p4 versus p0-i p4"
+  ],
+  "scope": "These are arithmetic/certificate negative controls, not additional PR examples."
+}

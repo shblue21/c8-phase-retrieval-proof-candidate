@@ -1,0 +1,22 @@
+{
+  "title": "An Explicit 26-Measurement Phase-Retrieving Frame in C8: Proof Candidate",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "An explicit Gaussian-integer 8-by-26 measurement frame and a self-contained candidate proof of global complex phase retrieval. The construction samples eight polynomials at 26 distinct positive real numbers. Three missing squared-modulus coefficients and exact strict-sign identities yield the claimed bound m_C(8) <= 26. No optimality, genericity, or numerical conditioning claim is made. The package includes the manuscript, LaTeX sources, exact matrix, original rational verifier and a separately transcribed symbolic verifier. Local logical and arithmetic checks have passed; external independent expert review and formal verification have not been completed. Substantial AI assistance was used. The manuscript and prose documentation use CC BY 4.0, while verification and build code use the MIT License; see LICENSE.md.",
+  "creators": [
+    {
+      "name": "Kim, Jihun",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "keywords": [
+    "complex phase retrieval",
+    "rank-one measurements",
+    "polynomial methods",
+    "exact arithmetic",
+    "proof candidate"
+  ]
+}

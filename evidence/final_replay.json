@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "python": "3.9.6",
+  "scripts": [
+    {
+      "script": "verify_sparse_certificate.py",
+      "return_code": 0
+    },
+    {
+      "script": "export_verify_frame.py",
+      "return_code": 0
+    },
+    {
+      "script": "negative_controls.py",
+      "return_code": 0
+    }
+  ],
+  "verified": {
+    "sparse_certificate.json": {
+      "status": "PASS",
+      "count": 336,
+      "mathematical_payload_sha256": "519f9d5ed56dbc703ed970c27ce40738964f157b7a38094eab02251f85b4838a"
+    },
+    "frame_exact_checks.json": {
+      "status": "PASS",
+      "count": 7,
+      "mathematical_payload_sha256": "f438eb09ef1aaf840610fb0c16b7001888dc5c3f2a815854787c9103c88f689a"
+    },
+    "negative_controls.json": {
+      "status": "PASS",
+      "count": 2,
+      "mathematical_payload_sha256": "61bc15b1e1484c5caf26110a15d1a7034ee17d5374ff0598396ec8d6ad9340b0"
+    }
+  },
+  "elapsed_seconds": 0.583145083,
+  "external_wolfram_rerun": false,
+  "note": "A rerun of the same code is a reproducibility check, not a new independent mathematical verification."
+}

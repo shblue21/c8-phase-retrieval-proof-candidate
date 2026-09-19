@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: >-
+  Please cite the proof candidate manuscript. This research package includes
+  its exact input and verification code. Citation does not imply completed
+  external peer review or formal verification. File-specific licensing is
+  described in LICENSE.md.
+type: software
+title: "An Explicit 26-Measurement Phase-Retrieving Frame in C8: Proof Candidate"
+authors:
+  - family-names: Kim
+    given-names: Jihun
+    affiliation: Independent Researcher
+    email: jihunkimkw@gmail.com
+abstract: >-
+  An explicit Gaussian-integer 8-by-26 frame and a self-contained candidate
+  proof of global phase retrieval, with exact symbolic verification and
+  reproducible data. The claimed result is m_C(8) <= 26, not optimality.
+  Local logical and arithmetic checks have passed; external independent
+  expert review and formal verification have not been completed.
+repository-code: "https://github.com/shblue21/c8-phase-retrieval-proof-candidate"
+keywords:
+  - complex phase retrieval
+  - rank-one measurements
+  - polynomial methods
+  - exact arithmetic
+preferred-citation:
+  type: unpublished
+  title: "An Explicit 26-Measurement Phase-Retrieving Frame in C8: Proof Candidate"
+  authors:
+    - family-names: Kim
+      given-names: Jihun
+      affiliation: Independent Researcher
+  year: 2026
