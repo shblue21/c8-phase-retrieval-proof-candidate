@@ -75,8 +75,8 @@ The manuscript is by Jihun Kim (Independent Researcher). Manuscript,
 documentation and data are licensed CC BY 4.0; code is licensed MIT.
 See [LICENSE.md](LICENSE.md) and [CITATION.cff](CITATION.cff).
 
-The repository is prepared for a Zenodo archive of its first public release.
-A DOI will be linked after the archived record has been verified.
+The first public release is archived on Zenodo: **[DOI: 10.5281/zenodo.22847200](https://doi.org/10.5281/zenodo.22847200)**.
+The DOI identifies the archived proof-candidate package; it is not a peer-review certification.
 
 See [publication preparation](docs/PUBLICATION.md) for the release checklist.
 

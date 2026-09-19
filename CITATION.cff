@@ -5,6 +5,9 @@ message: >-
   external peer review or formal verification. File-specific licensing is
   described in LICENSE.md.
 type: software
+doi: "10.5281/zenodo.22847200"
+date-released: 2026-09-19
+url: "https://doi.org/10.5281/zenodo.22847200"
 title: "An Explicit 26-Measurement Phase-Retrieving Frame in C8: Proof Candidate"
 authors:
   - family-names: Kim
@@ -30,4 +33,6 @@ preferred-citation:
     - family-names: Kim
       given-names: Jihun
       affiliation: Independent Researcher
+  doi: "10.5281/zenodo.22847200"
+  url: "https://doi.org/10.5281/zenodo.22847200"
   year: 2026
