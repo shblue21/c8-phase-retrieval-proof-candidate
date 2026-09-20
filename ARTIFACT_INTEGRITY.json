@@ -39,7 +39,7 @@
     },
     {
       "path": "scripts/check_artifact_integrity.py",
-      "sha256": "581f56a54490cda616a751fe276cc19675251c75fc59079c7866bfac78dbd14d"
+      "sha256": "4a49dffb0b80dbca67e987e0bc18827cfeed7fa9336e9903ad4fa20c4119d119"
     },
     {
       "path": "verification/independent/RESULT.json",

@@ -1,6 +1,6 @@
 """Check the reviewed source/PDF/data snapshot; this is not a proof verifier."""
 from pathlib import Path
-import hashlib,json,argparse,re,subprocess,unicodedata
+import hashlib,json,argparse,re,subprocess,unicodedata,difflib
 ROOT=Path(__file__).resolve().parents[1]
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def pdf_text(p):
@@ -20,6 +20,12 @@ def main():
  bibs=set(re.findall(r'\\bibitem\{([^}]+)\}',source));cites={k for group in re.findall(r'\\cite\{([^}]+)\}',source) for k in group.split(',')}
  if cites-bibs:raise AssertionError('Undefined citations: '+str(cites-bibs))
  if a.rebuilt_pdf:
-  if pdf_text(ROOT/manifest['pdf'])!=pdf_text(a.rebuilt_pdf.resolve()):raise AssertionError('Rebuilt PDF text differs from checked-in PDF')
+  expected=pdf_text(ROOT/manifest['pdf']);actual=pdf_text(a.rebuilt_pdf.resolve())
+  if expected!=actual:
+   matcher=difflib.SequenceMatcher(None,expected,actual,autojunk=False)
+   differences=[]
+   for op,i,j,k,l in matcher.get_opcodes():
+    if op!='equal':differences.append({'op':op,'expected':expected[max(0,i-50):j+50],'rebuilt':actual[max(0,k-50):l+50]})
+   raise AssertionError('Rebuilt PDF text differs: '+json.dumps(differences[:12],ensure_ascii=False))
  print('PASS: reviewed source/PDF/data hashes and references'+('; rebuilt PDF text agrees' if a.rebuilt_pdf else ''))
 if __name__=='__main__':main()
