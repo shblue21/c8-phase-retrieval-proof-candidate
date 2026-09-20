@@ -4,8 +4,11 @@ import hashlib,json,argparse,re,subprocess,unicodedata,difflib
 ROOT=Path(__file__).resolve().parents[1]
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def pdf_text(p):
- text=subprocess.check_output(['pdftotext',str(p),'-'],text=True)
- return re.sub(r'\s+','',unicodedata.normalize('NFKC',text))
+ text=subprocess.check_output(['pdftotext','-raw',str(p),'-'],text=True)
+ # Raw content-stream order avoids heuristic reversal of stacked fraction glyphs.
+ normalized=re.sub(r'\s+','',unicodedata.normalize('NFKC',text))
+ # TeX/Poppler can place the combining slash before or after the equals glyph.
+ return normalized.replace('=\u0338','≠').replace('\u0338=','≠')
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--rebuilt-pdf',type=Path);a=parser.parse_args()
  manifest=json.loads((ROOT/'ARTIFACT_INTEGRITY.json').read_text())
