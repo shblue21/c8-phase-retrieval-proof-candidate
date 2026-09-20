@@ -1,0 +1,1 @@
+PASS 224 exact checks; product rank 26 ; elapsed 2.078248977661133

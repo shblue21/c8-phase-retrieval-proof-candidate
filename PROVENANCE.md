@@ -1,53 +1,43 @@
-# Mathematical and computational status
+# Mathematical and computational provenance — Version 2
 
-The proof candidate was supplied on 19 September 2026 with an explicit
-Gaussian-integer frame, a self-contained English argument, standard-library
-verification code, and an additional Wolfram log.
+The first release supplied an explicit C8/26 frame and a candidate proof.
+Version 2 extends that construction to a five-parameter family, proves its
+boundary within the stated parameter domain, and gives a twenty-term
+representative. It does not include the higher-dimensional follow-up
+candidates or the incomplete all-dimensions conjecture as theorems.
 
-The original matrix JSON has SHA256:
+The original frame is retained byte-for-byte in `PR26_FRAME_QI.json` and
+`data/v1_frame_gaussian_integer.json`. Its SHA256 is
+`354fedefbbb0323ca506b65518fe1b09465aedf42d90fc26e32162b30ab09107`.
+The new frame is `data/v2_sparse_frame_gaussian_integer.json`.
 
-```text
-354fedefbbb0323ca506b65518fe1b09465aedf42d90fc26e32162b30ab09107
-```
+## Checks and their scope
 
-The original proof source has SHA256:
+The original family and boundary checkers were replayed in an isolated copy:
+224 and 11 checks passed and their mathematical payloads agreed with the
+source results. A new script transcribed the expanded family directly without
+importing those checkers or their basis data. Its 847 assertions cover all
+64 products at the three missing degrees, all 28 initial-index pairs, fixed
+triangular pivots and substitutions, strict-sign identities, the full boundary
+identity, both specializations, the invertible basis change, and all 416
+Gaussian-integer entries across the two frames.
 
-```text
-a4db968909ef34069e94afe9d4ffe60ea4647ba9f259453bc568656da6d9ab81
-```
+Both implementations use SymPy 1.14.0. Separate transcription is not a second
+computer-algebra system or external expert review. The local logical review
+covered the positive-root argument, signal normalization, every initial-index
+case, nonzero divisors, justified restarts, the boundary and strict-interior
+collision constructions, and the passage from polynomial bases to measurement
+vectors. In the final copyedit, the Rolle induction was stated using the
+actual number of monomials to treat the single-term case explicitly.
 
-The public manuscript is an expository revision: it explains the construction,
-the fixed-average real-linear map, and the final two-by-two determinant before
-and alongside the full coefficient calculations. Original equations (1)-(15)
-and their mathematical content are retained. The source proof and private
-research history are preserved separately; they are not required to run this
-package.
+The files in `verification/` record v2 code and execution evidence. The
+`verification/provided/data/` and `verification/independent/RESULT.json` files
+are expected payloads used by the replay wrapper. `sources/` retains the
+originally supplied sparse frame for comparison.
+The original v1 code and evidence remain in `code/`, `independent/`, and
+`evidence/`; their checks apply to the first fixed input. The stored v1 Wolfram
+log was supplied with that research and was not rerun in the local review.
 
-## Checks already performed
-
-- The supplied standard-library verifier was rerun in an isolated directory:
-  336 polynomial checks, seven matrix checks, and two negative controls passed.
-  Its stable mathematical payloads agreed with the supplied logs.
-- An independently transcribed SymPy implementation, importing no supplied
-  verifier code, recomputed the basis products, all first-index pairs, the
-  coefficient eliminations, strict-sign identities, and 208 matrix entries.
-  Its 633 finite checks passed.
-- Local logical review covered positive sampling, phase normalization, all
-  first-index cases, zero signals, zero measurements, repeated roots, common
-  factors, constant denominators, and the connection to the physical frame.
-- The stored Wolfram output was supplied with the research. It was not rerun
-  in the local review. The `.wl` input is included for further examination.
-
-These are arithmetic reproductions and local review, not completed external
-independent specialist review or a formal proof. A numerical search is not
-part of the final acceptance criterion.
-
-The original archive contained 97 files including its manifest; the accompanying
-message referred to 201 files. The received manifest's 96 entries all matched.
-The discrepancy was recorded; the core proof, matrix and verification scripts
-were present. This repository contains a deliberately selected public package,
-not the full exploration archive.
-
-The manuscript, discovery and exact-check implementation were developed with
-substantial AI assistance. Attribution and licensing are specified separately
-in the finalized citation and license files.
+No numerical tolerance, random search, or failure to find a collision serves
+as the proof criterion. External independent expert review and proof-assistant
+verification have not been completed. The work used substantial AI assistance.

@@ -1,0 +1,16 @@
+{
+  "runs": [
+    {
+      "script": "verify_parametric8.py",
+      "exit_code": 0,
+      "seconds": 2.3340940475463867
+    },
+    {
+      "script": "verify_sharp_boundary.py",
+      "exit_code": 0,
+      "seconds": 0.3306288719177246
+    }
+  ],
+  "mathematical_payloads_match": true,
+  "sparse_frame_bytes_match": true
+}

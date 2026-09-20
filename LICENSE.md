@@ -9,7 +9,7 @@ data/evidence files are made available under the Creative Commons Attribution
 https://creativecommons.org/licenses/by/4.0/
 
 The verification and build code in `code/`, `independent/` (Python files),
-`scripts/`, and `.github/workflows/` is licensed under the MIT License below.
+`scripts/`, `verification/` (Python files), and `.github/workflows/` is licensed under the MIT License below.
 Where a license applies to mixed directories, code files use MIT and prose
 or data files use CC BY 4.0.
 

@@ -1,88 +1,80 @@
-# An explicit 26-measurement frame in complex dimension eight
+# Explicit phase retrieval in complex dimension eight — Version 2
 
-**Proof candidate.** This repository contains an explicit Gaussian-integer
-8-by-26 frame and a self-contained proposed proof of its global phase-retrieval
-property. The claim is **m_C(8) <= 26**, not that 26 is minimal. External
-independent expert review and formal verification have not been completed.
+**Proof candidate; not peer reviewed.** Version 2 gives a five-parameter family
+of explicit 26-measurement frames, its exact success/failure boundary, and a
+representative defined by twenty polynomial terms. The result is
+**m_C(8) <= 26**. Minimality and numerical stability are not established.
 
-## Read the argument
+## Manuscript and inputs
 
-- [Proof candidate PDF](manuscript/PR26_Proof_Candidate.pdf)
-- [Readable mathematical source](manuscript/proof_body.md)
-- [Exact measurement matrix](PR26_FRAME_QI.json)
-- [Verification status and provenance](PROVENANCE.md)
+- [Version 2 PDF](manuscript/PR26_Proof_Candidate.pdf)
+- [LaTeX source](manuscript/proof_candidate.tex)
+- [Exact coefficient substitutions](manuscript/coefficient_substitutions.tex)
+- [Twenty-term representative: 8-by-26 Gaussian-integer frame](data/v2_sparse_frame_gaussian_integer.json)
+- [Original frame, retained without changes](data/v1_frame_gaussian_integer.json)
+- [Changes from the first release](CHANGELOG.md)
+- [Verification and provenance](PROVENANCE.md)
 
-The construction represents a signal by a polynomial in a specified
-eight-dimensional space. Three squared-modulus coefficients vanish, so
-26 distinct positive evaluations determine the entire squared modulus.
-After aligning the first coefficients of two possible signals, their average
-and half-difference must be pointwise perpendicular in the real plane C.
-Successive coefficient equations, ending with an invertible real symmetric
-two-by-two matrix, force the difference to vanish.
+For real b,c and 0<s<1, m<0, gamma>0, the family in the manuscript gives
+phase retrieval precisely when c>b²/s. Any 26 distinct positive real sampling
+points work in that region. Outside it, the manuscript constructs pairs with
+identical squared moduli on the entire real line.
 
-The matrix supplied here evaluates the eight polynomials at t = 1,...,26.
-Its orientation is eight signal coordinates by 26 measurement columns;
-the measurement is |q_j^* x|^2. JSON integers must be read without converting
-them to floating point.
+The first release is the specialization (1,4,1/2,-2,1). The twenty-term example
+uses (0,1,1/2,-1,1) followed by the displayed invertible basis transformation.
+Both frames use q_j = 2 conjugate(p(j)), with the appropriate displayed basis.
+They are different inputs and have separate data files. Read the integer JSON
+entries without conversion to floating point.
 
-## Reproduce the exact checks
+## Reproduce the checks
 
-Use Python 3.9 or newer. The original verifier needs only the standard library:
-
-```sh
-python3 scripts/verify.py
-```
-
-Expected: 336 polynomial checks, seven frame checks, and two negative controls
-pass, with the mathematical payloads matching `evidence/`. The wrapper runs
-in a temporary directory and does not overwrite the archived input or logs.
-
-The separate symbolic implementation requires SymPy:
+Use Python 3.9 or newer and SymPy 1.14.0:
 
 ```sh
 python3 -m pip install -r requirements-verification.txt
-python3 scripts/verify.py --independent
+python3 scripts/verify.py
 ```
 
-Expected: the same checks plus 633 separately transcribed finite symbolic
-checks. A check count is not a count of independently proved theorems.
-The analytic sampling and case-coverage arguments are in the manuscript.
+The command uses a temporary copy and checks:
 
-To rebuild the PDF from the included LaTeX sources:
+- 224 family identities/checks;
+- 11 boundary identities;
+- 847 assertions in a separately transcribed implementation;
+- agreement with the archived mathematical payloads and both frame inputs.
+
+Both transcriptions use SymPy. These are finite exact arithmetic checks, not
+external expert review or proof-assistant certification. The inequalities,
+coverage of all cases, restart arguments, and nonproportionality are proved
+in the manuscript. Counts are documented execution units, not separate theorems.
+
+The original v1 code and evidence remain in `code/`, `independent/`, and
+`evidence/`. They concern the original fixed frame. To replay them as well:
+
+```sh
+python3 scripts/verify.py --v1
+```
+
+To build the manuscript with `pdflatex`:
 
 ```sh
 python3 scripts/build_paper.py
 ```
 
-This requires `pdflatex` and standard AMS/LaTeX packages. The rebuilt file is
-written to `_build/PR26_Proof_Candidate.pdf`; the checked-in PDF is preserved.
+The output is `_build/PR26_Proof_Candidate.pdf`; the checked-in PDF is preserved.
 
-## Scope
+## Citation and versions
 
-The proposed theorem applies to the displayed family at any 26 distinct
-positive real sample points. It does not assert that all or generic sets of
-26 vectors work, that 25 measurements are impossible, or that this integer
-matrix is well conditioned for computation. No numerical tolerance or failure
-to find a collision is used as the acceptance criterion of the proof.
+Author: Jihun Kim, Independent Researcher.
 
-The final proof does not rely on earlier unpublished curve-classification
-or obstruction claims. Only the explicit polynomials, coefficient identities,
-real inequalities and Rolle's theorem enter the argument.
+- [Version 2 GitHub release](https://github.com/shblue21/c8-phase-retrieval-proof-candidate/releases/tag/v2)
+- [All versions on Zenodo](https://doi.org/10.5281/zenodo.22847199)
+- [First release DOI](https://doi.org/10.5281/zenodo.22847200)
 
-## Citation and DOI
+The version-specific v2 DOI will be linked after archival confirmation.
+DOI registration preserves an identifiable research artifact; it does not
+constitute mathematical peer review.
 
-The manuscript is by Jihun Kim (Independent Researcher). Manuscript,
-documentation and data are licensed CC BY 4.0; code is licensed MIT.
-See [LICENSE.md](LICENSE.md) and [CITATION.cff](CITATION.cff).
-
-The first public release is archived on Zenodo: **[DOI: 10.5281/zenodo.22847200](https://doi.org/10.5281/zenodo.22847200)**.
-The DOI identifies the archived proof-candidate package; it is not a peer-review certification.
-
-See [publication preparation](docs/PUBLICATION.md) for the release checklist.
-
-## Contributions
-
-The mathematical exploration, manuscript preparation and verification used
-substantial AI assistance. Local logical review and independent arithmetic
-implementations are documented in `PROVENANCE.md`. They are not represented
-as completed external peer review or proof-assistant certification.
+The research, exposition and computational checks used substantial AI
+assistance. External expert review and formal verification remain incomplete.
+Paper, prose and data: CC BY 4.0. Code: MIT. See [LICENSE.md](LICENSE.md)
+and [CITATION.cff](CITATION.cff).

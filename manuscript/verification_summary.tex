@@ -1,0 +1,24 @@
+Two implementations using SymPy check the coefficient identities, the
+specializations, the basis transformation, and the frame entries.
+The second was transcribed separately and imports neither the original
+checker nor its basis data. Together the checks cover the three missing
+degrees in all 64 ordered products $p_jp_k^\#$, all 28 pairs $0\le i<j\le7$,
+the elimination and boundary identities, and all 416 entries across the
+two frames. The execution logs record the following completed checks:
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Implementation & Checks completed\\
+\midrule
+Original family checker &224\\
+Boundary identities &11\\
+Separate transcription &847\\
+\bottomrule
+\end{tabular}
+\end{center}
+The inequalities and the logical arguments covering all cases, restarts,
+and nonproportionality are given in the text. The exact frame data are in
+\begin{itemize}
+\item \texttt{data/v1\_frame\_gaussian\_integer.json} for the original example;
+\item \texttt{data/v2\_sparse\_frame\_gaussian\_integer.json} for the twenty-term example.
+\end{itemize}

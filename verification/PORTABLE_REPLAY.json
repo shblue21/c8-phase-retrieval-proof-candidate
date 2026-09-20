@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "script": "verification/provided/code/verify_parametric8.py",
+      "exit_code": 0,
+      "seconds": 2.4461028575897217
+    },
+    {
+      "script": "verification/provided/code/verify_sharp_boundary.py",
+      "exit_code": 0,
+      "seconds": 0.35319995880126953
+    },
+    {
+      "script": "verification/independent/check_c8_family.py",
+      "exit_code": 0,
+      "seconds": 4.16772985458374
+    }
+  ],
+  "mathematical_payloads_and_frames_match": true
+}

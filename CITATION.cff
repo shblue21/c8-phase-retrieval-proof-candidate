@@ -5,21 +5,22 @@ message: >-
   external peer review or formal verification. File-specific licensing is
   described in LICENSE.md.
 type: software
-doi: "10.5281/zenodo.22847200"
-date-released: 2026-09-19
-url: "https://doi.org/10.5281/zenodo.22847200"
-title: "An Explicit 26-Measurement Phase-Retrieving Frame in C8: Proof Candidate"
+doi: "10.5281/zenodo.22847199"
+date-released: 2026-09-20
+version: "v2"
+url: "https://doi.org/10.5281/zenodo.22847199"
+title: "An Explicit 26-Measurement Phase-Retrieving Frame in C8: A Five-Parameter Family and Its Exact Boundary (Proof Candidate, Version 2)"
 authors:
   - family-names: Kim
     given-names: Jihun
     affiliation: Independent Researcher
     email: jihunkimkw@gmail.com
 abstract: >-
-  An explicit Gaussian-integer 8-by-26 frame and a self-contained candidate
-  proof of global phase retrieval, with exact symbolic verification and
-  reproducible data. The claimed result is m_C(8) <= 26, not optimality.
-  Local logical and arithmetic checks have passed; external independent
-  expert review and formal verification have not been completed.
+  A five-parameter family of C8/26 frames with a proposed proof of the exact
+  boundary c>b^2/s under 0<s<1, m<0, gamma>0. Includes the original frame,
+  a twenty-term representative, ambiguous pairs on the complementary region,
+  exact data and reproducibility scripts. Local symbolic and logical checks
+  passed; external review and formal verification remain incomplete.
 repository-code: "https://github.com/shblue21/c8-phase-retrieval-proof-candidate"
 keywords:
   - complex phase retrieval
@@ -28,11 +29,11 @@ keywords:
   - exact arithmetic
 preferred-citation:
   type: unpublished
-  title: "An Explicit 26-Measurement Phase-Retrieving Frame in C8: Proof Candidate"
+  title: "An Explicit 26-Measurement Phase-Retrieving Frame in C8: A Five-Parameter Family and Its Exact Boundary (Proof Candidate, Version 2)"
   authors:
     - family-names: Kim
       given-names: Jihun
       affiliation: Independent Researcher
-  doi: "10.5281/zenodo.22847200"
-  url: "https://doi.org/10.5281/zenodo.22847200"
+  doi: "10.5281/zenodo.22847199"
+  url: "https://doi.org/10.5281/zenodo.22847199"
   year: 2026

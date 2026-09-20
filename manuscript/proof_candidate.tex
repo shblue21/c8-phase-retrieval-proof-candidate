@@ -2,49 +2,522 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[margin=27mm]{geometry}
-\usepackage{amsmath,amssymb,amsthm}
-\usepackage{booktabs,longtable,array}
-\newcounter{none}
-\usepackage{microtype}
-\usepackage{xcolor}
-\usepackage{hyperref}
-\usepackage{fancyhdr}
-\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,
-pdftitle={An Explicit 26-Measurement Phase-Retrieving Frame in C8: Proof Candidate}}
-\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{amsmath,amssymb,amsthm,booktabs,microtype,xcolor,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=blue,pdfauthor={Jihun Kim},pdftitle={An Explicit 26-Measurement Phase-Retrieving Frame in C8: Version 2}}
 \setlength{\emergencystretch}{3em}
-\setlength{\parskip}{0.35em}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\small Explicit phase retrieval in $\mathbb C^8$}
-\fancyhead[R]{\small Proof Candidate}
-\fancyfoot[C]{\thepage}
+\setlength{\parskip}{0.25em}
 \setlength{\headheight}{14pt}
-\title{An Explicit 26-Measurement\\Phase-Retrieving Frame in $\mathbb C^8$\\[0.6em]
-\large Proof Candidate}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Explicit phase retrieval in $\mathbb C^8$}
+\fancyhead[R]{\small Proof Candidate v2}\fancyfoot[C]{\thepage}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\co}[2]{[t^{#1}]\,#2}
+\title{An Explicit 26-Measurement\\Phase-Retrieving Frame in $\mathbb C^8$\\[0.5em]
+\large A five-parameter family and its exact boundary\\Proof Candidate -- Version 2}
 \input{author_metadata.tex}
-\date{19 September 2026}
-\begin{document}
-\maketitle
+\date{20 September 2026}
+\begin{document}\maketitle
 \begin{abstract}
-Can 26 squared absolute values of complex linear functionals distinguish
-every vector in $\mathbb C^8$ up to a common phase? We give an explicit
-Gaussian-integer construction and a self-contained candidate proof that
-they can. A vector is represented by a polynomial in a specified
-eight-dimensional space. Three missing coefficients make 26 positive
-samples determine its squared modulus. To show that the polynomial is
-then determined up to phase, we compare two possible solutions through
-their average and difference. Equal moduli impose pointwise real
-orthogonality. Successive coefficients reduce this condition to positive
-sums of squares and, in the last case, a real symmetric two-by-two
-matrix whose determinant is strictly negative. The claimed conclusion
-is $m_{\mathbb C}(8)\le26$, with no assertion of optimality.
-The identities and frame entries have passed local review and separate
-exact symbolic checks; external independent expert review is pending.
+We construct a five-parameter family of 26-measurement frames in $\CC^8$.
+For real parameters $b,c,s,m,\gamma$ with $0<s<1$, $m<0$, and $\gamma>0$,
+the family gives phase retrieval precisely when $c>b^2/s$.
+The measurements determine squared moduli of polynomial evaluations at any
+26 distinct positive real points. Three vanishing coefficients and a bound
+on positive roots imply that these values determine the squared-modulus
+polynomial. To prove
+uniqueness up to phase, we compare the average and difference of two
+possible signals. Coefficient elimination reduces the problem to positive
+quadratic expressions and an invertible two-by-two matrix. When $c\le b^2/s$,
+we construct nonproportional polynomials with identical squared moduli.
+The family contains the previously published frame and a representative
+with twenty monomial terms. The result gives $m_{\CC}(8)\le26$;
+minimality is not established.
 \end{abstract}
-\noindent\textbf{Status.} Proof candidate for examination; not peer reviewed.
-The complete proposed proof and exact input are given below and in the
-supplementary reproducibility archive.
-\medskip
-\input{proof_body.tex}
+\noindent\textbf{Status.} Proof candidate; not peer reviewed.
+Section~\ref{sec:status} describes
+the completed checks and their scope.
+
+\section{The question, and a short explicit answer}
+A measurement of $x\in\CC^8$ is a real number $|q^*x|^2$, where
+$q^*x=\sum_{k=0}^7\overline{q_k}x_k$.
+Multiplying $x$ by a complex scalar of modulus one leaves every such
+measurement unchanged. We ask whether 26 choices of $q$ distinguish
+vectors in $\CC^8$ up to this unavoidable common phase.
+A family with this property is called a phase-retrieving frame.
+For any dimension $d$, let $m_{\CC}(d)$ denote the least number of such
+measurements needed to distinguish all vectors in $\CC^d$ up to a common phase.
+
+Consider the following eight polynomials:
+\begin{equation}\label{eq:sparse}
+\begin{aligned}
+r_0&=1+it+it^5-it^{13},&
+r_1&=t^2+\tfrac i2t^3-it^{11},\\
+r_2&=t^4+it^5-it^9,&
+r_3&=t^6-it^7,\\
+r_4&=t^8+it^9+it^{13},&
+r_5&=t^{10}+\tfrac i2t^{11},\\
+r_6&=t^{12}+it^{13},&r_7&=t^{14}.
+\end{aligned}
+\end{equation}
+For $j=1,\ldots,26$ take
+\begin{equation}\label{eq:sparseframe}
+ q_j=2\bigl(\overline{r_0(j)},\ldots,\overline{r_7(j)}\bigr)^T.
+\end{equation}
+Every entry is a Gaussian integer. The proof below shows that equality of
+these 26 measurements forces two vectors to differ by a common phase.
+The eight defining polynomials in \eqref{eq:sparse} contain twenty monomial
+terms in total.
+
+The geometric idea is to represent a signal by a polynomial $f$.
+With our normalization, the measurement at $t_j$ is $4|f(t_j)|^2$
+and therefore determines $|f(t_j)|^2$.
+We arrange two properties: 26 samples determine this whole real polynomial,
+and the polynomial determines $f$ up to phase. For the second property,
+align their lowest-degree nonzero coefficients at $t=0$ and write them as
+$v+h$ and $v-h$. Equal squared moduli mean that $v(t)$ and $h(t)$ are
+perpendicular in the real plane $\CC$ at every real $t$.
+The chosen space makes this possible only when $h=0$.
+
+We work with a larger family to identify the sign condition that separates
+uniqueness from ambiguity. The basis in \eqref{eq:sparse} is obtained from
+the parameter choice $(b,c,s,m,\gamma)=(0,1,\tfrac12,-1,1)$ by an invertible
+linear transformation, given in Section~\ref{sec:examples}. The frame
+in the first release~\cite{KimV1} is another member of the family.
+
+Conca, Edidin, Hering, and Vinzant proved that $4d-4$ generic complex
+measurements suffice in dimension $d$~\cite{CEHV}. Vinzant constructed
+eleven measurements in dimension four~\cite{Vinzant}. Here we give explicit
+26-measurement frames in dimension eight and characterize the successful
+parameters within our family.
+
+\section{A family with a sharp boundary}\label{sec:family}
+For a polynomial $f(t)=\sum c_jt^j$, put
+$f^\#(t)=\sum\overline{c_j}t^j$. Thus $ff^\#$ has real coefficients and,
+for real $t$, equals $|f(t)|^2$.
+We write $[t^j]f$ for the coefficient of $t^j$ in $f$; for a matrix of
+polynomials this notation is applied entry by entry. Conjugation also
+acts entry by entry, and $a^{\#T}$ means $(a^\#)^T$.
+Let $b,c\in\RR$ and assume
+\begin{equation}\label{eq:domain}
+ 0<s<1,\qquad m<0,\qquad \gamma>0.
+\end{equation}
+Define
+\begin{equation}\label{eq:seed}
+ a=\begin{pmatrix}1+it+bt^3+ict^5\\t^2+ist^3-bt^5\\t^4+it^5\end{pmatrix},
+ \qquad J=\begin{pmatrix}2c&0&2\\0&2s&0\\2&0&0\end{pmatrix}.
+\end{equation}
+Since $\det J=-8s$, the matrix is invertible on the whole domain, including
+$c\le b^2/s$. Concatenate the following entries to form $p=(p_0,\ldots,p_7)^T$:
+\begin{equation}\label{eq:assembly}
+ p=\bigl(a+\gamma t^8J^{-1}a^\#,\quad t^6+imt^7,\quad t^8a,\quad t^{14}\bigr)^T.
+\end{equation}
+The transpose in this notation only indicates a column of eight entries.
+Let $U=\operatorname{span}_{\CC}\{p_0,\ldots,p_7\}$.
+Each $p_j$ begins with $t^{2j}$, with coefficient one, so these entries are
+linearly independent and $\dim_{\CC}U=8$.
+
+The identity $[t^5](aa^T)=iJ$ explains the choice of $J^{-1}$:
+the conjugated correction cancels the degree-thirteen cross terms,
+as shown in Section~\ref{sec:sampling}. Without this correction, the space
+would contain both $a_0$ and $t^8a_0$, and hence the ambiguous pair
+$a_0(1+it^8)$, $a_0(1-it^8)$.
+
+\begin{theorem}\label{thm:main}
+Under \eqref{eq:domain}, let $t_1,\ldots,t_{26}$ be any distinct positive real
+numbers and set $q_j=2\overline{p(t_j)}$.
+The vectors $q_j$ give phase retrieval if and only if
+\begin{equation}\label{eq:sharp}
+ \Delta:=c-\frac{b^2}{s}>0.
+\end{equation}
+When $\Delta\le0$, the space $U$ contains two nonproportional polynomials
+with identical squared-modulus polynomials. Consequently, no set of real
+sampling points can distinguish all elements of $U$ up to phase by their
+squared moduli.
+\end{theorem}
+
+The quantity $\Delta$ is the minimum of the quadratic expression $R$ in
+\eqref{eq:RD}. Positivity of $R$ is the key sign condition in the uniqueness
+proof. Section~\ref{sec:failure} constructs ambiguous pairs when
+$\Delta\le0$.
+
+For $f_x=\sum x_kp_k$ one has $q_j^*x=2f_x(t_j)$.
+Thus the measurement is $|q_j^*x|^2=x^*(q_jq_j^*)x$, with the rank-one
+matrix $q_jq_j^*$. Every $q_j$ is nonzero since $p_7(t_j)=t_j^{14}>0$.
+When the parameters and sampling points are rational, a common integer
+scaling makes every entry of every measurement vector a Gaussian integer.
+
+\section{Why 26 positive sampling points suffice}\label{sec:sampling}
+All polynomials in $U$ have degree at most 14. For every $u\in U$,
+\begin{equation}\label{eq:missing}
+ [t]uu^\#=[t^5]uu^\#=[t^{13}]uu^\#=0.
+\end{equation}
+The seed satisfies
+$[t](aa^{\#T})=[t^5](aa^{\#T})=0$ and $[t^5](aa^T)=iJ$;
+these follow by multiplying the three displayed entries in \eqref{eq:seed}.
+The correction starts in degree eight and hence does not affect the first
+two missing degrees. In products $p_jp_k^\#$ with $j,k<3$, the correction
+contributes the following matrix to the coefficient of degree thirteen:
+\[
+ \gamma\bigl(iJJ^{-T}-iJ^{-1}J\bigr)=0.
+\]
+Products between a corrected seed entry and an entry of $t^8a$, with
+coefficient conjugation on one factor, reduce to the vanishing degree-five
+coefficient of $aa^{\#T}$. The squared modulus of $p_3=t^6+imt^7$ is
+$t^{12}+m^2t^{14}$. Products involving $p_3$ and an entry of
+the corrected seed or $t^8a$ have no term of degree thirteen; all other
+products start in higher degree. This proves \eqref{eq:missing}
+for all products $p_jp_k^\#$ and hence for every $u$.
+
+\begin{lemma}\label{lem:roots}
+A nonzero real polynomial with at most $M$ nonzero monomials has at most
+$M-1$ distinct positive roots.
+\end{lemma}
+\begin{proof}
+Induct on the actual number $N\le M$ of nonzero monomials.
+The case $N=1$ is immediate. For $N\ge2$, divide by the lowest power of
+$t$, which preserves positive roots. The resulting polynomial has a
+nonzero constant term and $N-1$ other monomials. Its derivative is nonzero
+and has $N-1$ monomials, so by induction it has at most $N-2$ distinct
+positive roots. Rolle's theorem gives at most $N-1\le M-1$ distinct
+positive roots for the original polynomial.
+\end{proof}
+
+For $f,g\in U$, the real polynomial $ff^\#-gg^\#$ has degree at most 28.
+Of the 29 possible coefficients, three vanish by \eqref{eq:missing}.
+Thus it has at most 26 nonzero monomial terms. If 26 sampled squared moduli agree,
+Lemma~\ref{lem:roots} gives
+\begin{equation}\label{eq:normid}
+ ff^\#=gg^\#.
+\end{equation}
+The use of distinct \emph{positive} nodes is essential to this argument.
+It remains to understand when \eqref{eq:normid} forces a common phase.
+
+\section{Comparing an average with its difference}\label{sec:normal}
+If one polynomial in \eqref{eq:normid} is zero, so is the other.
+For $f\ne0$, let $i$ be the least index with a nonzero coefficient in
+its expansion in the basis $p_0,\ldots,p_7$. If the first term of $f$ at
+zero is $\lambda t^{2i}$, the first term of $ff^\#$ is
+$|\lambda|^2t^{4i}$. Equation~\eqref{eq:normid} therefore gives the same
+initial index $i$ for $g$, with initial coefficient of modulus $|\lambda|$.
+Rotate the phases of $f$ and $g$ independently and divide both by this common modulus so that
+both initial coefficients become one. Then
+\begin{equation}\label{eq:vh}
+\begin{aligned}
+ v&=(f+g)/2=p_i+\sum_{j>i}(x_j+iy_j)p_j,\\
+ h&=(f-g)/2=\sum_{j>i}(r_j+i\alpha_j)p_j,\\
+ F&=hv^\#+h^\#v=0.
+\end{aligned}
+\end{equation}
+Since $ff^\#-gg^\#=2(hv^\#+h^\#v)$, equality of the squared-modulus
+polynomials is equivalent to $F=0$. Here $x_j,y_j,r_j,\alpha_j\in\RR$
+are coordinates of the normalized average and difference. For real $t$,
+$F(t)=2\operatorname{Re}(h(t)\overline{v(t)})$, so $F=0$ expresses
+pointwise orthogonality in the real plane $\CC$. The normalization divides
+only by the nonzero initial coefficient modulus and imposes no restriction
+on measurement zeros, common factors, or repeated roots.
+
+For each fixed $v$, the map $h\mapsto hv^\#+h^\#v$ is real-linear on
+$\operatorname{span}_{\CC}\{p_{i+1},\ldots,p_7\}$, viewed as a real vector
+space. We prove its injectivity for every allowed $v$ by triangular
+coefficient elimination, followed by scalar equations with strictly signed
+factors and a two-dimensional linear system in the last case.
+
+The expansions at $t=0$ are
+\[
+ p_j=t^{2j}(1+i\sigma_jt)+O(t^{2j+2}),\qquad
+ (\sigma_0,\ldots,\sigma_7)=(1,s,1,m,1,s,1,0).
+\]
+If $h\ne0$ and $j>i$ is its first nonzero index, the first two possible
+coefficients of $F$ are $2r_j$ and, after $r_j=0$,
+$2(\sigma_i-\sigma_j)\alpha_j$. Higher indices cannot contribute to them.
+It follows that $r_j=0$ and $\sigma_i=\sigma_j$.
+The four values $1,s,m,0$ are distinct under \eqref{eq:domain}, so the only
+possible pairs are
+\begin{equation}\label{eq:pairs}
+ (i;j)=(0;2,4,6),\ (1;5),\ (2;4,6),\ (4;6).
+\end{equation}
+For $i=3,5,6,7$ there is no possible nonzero difference.
+Thus the argument also covers signals whose first several $p$-basis coordinates vanish.
+
+Write $E_k=[t^k]F$. Eliminate the difference coefficients in increasing
+order of $j$. The coefficient of $F$ at degree $2i+2j$ determines
+$r_j$ by division by 2. After that substitution, the next coefficient
+determines $\alpha_j$ by division by the fixed nonzero number
+$2(\sigma_i-\sigma_j)$ whenever the slopes differ. Equal slopes leave
+$\alpha_j$ free and the corresponding equation as a constraint.
+The term involving $\alpha_j$ in its even-degree equation is zero because
+the leading coefficients are real. No later index can affect these equations.
+The recurrence uses only these fixed nonzero divisors.
+Appendix~\ref{app:subs} records all substitutions needed below.
+
+\section{The positive side of the boundary}\label{sec:suff}
+Assume now $\Delta>0$. Put
+\begin{equation}\label{eq:RD}
+\begin{aligned}
+ R(X,Y)&=c-2bY+s(1-s)X^2+sY^2\\
+       &=\Delta+s(1-s)X^2+s(Y-b/s)^2>0,\\
+ D&=c+\gamma-\frac{b^2}{s-m}
+   =\Delta+\gamma+\frac{(-m)b^2}{s(s-m)}>0.
+\end{aligned}
+\end{equation}
+These inequalities force the remaining difference coefficients in \eqref{eq:pairs} to vanish.
+Every equation below is a coefficient of the same $F$ after the stated
+preceding substitutions.
+
+\subsection{The average starts with \texorpdfstring{$p_4$ or $p_1$}{p4 or p1}}
+For $i=4$, the only possible first difference is at 6. Eliminating through
+degree 23 gives
+\[
+ E_{25}=2\alpha_6R(x_5,y_5).
+\]
+Thus $\alpha_6=0$ and all remaining coefficients of $h$ vanish.
+For $i=1$, start the difference at 5 and eliminate through degree 17. Then
+\[
+ E_{21}=-2\alpha_5\left[
+ \gamma(1+x_2^2+y_2^2)+\frac{m(m-s)}s x_3^2-my_3^2\right].
+\]
+The bracket is at least $\gamma>0$, so again $h=0$.
+
+\subsection{The average starts with \texorpdfstring{$p_2$}{p2}}
+Start the difference at 4 and eliminate through degree 16. One obtains
+\[
+ E_{17}=-2\alpha_4\left[
+ \frac{(1-m)(s-m)}{1-s}x_3^2
+ +(s-m)\left(y_3-\frac b{s-m}\right)^2+D\right].
+\]
+The coefficients of the squared terms are positive, and $D>0$, so $\alpha_4=0$.
+The eliminated coefficients before index 6 also become zero. Restarting
+at 6 and eliminating through degree 19 yields
+\[
+ E_{21}=-2\alpha_6\left[\gamma+m(m-1)x_3^2-my_3^2\right].
+\]
+The bracket is at least $\gamma$, which forces $\alpha_6=0$ and $h=0$.
+
+\subsection{The average starts with \texorpdfstring{$p_0$}{p0}: removing the first difference}
+Start the difference at 2 and eliminate through degree 8. Then
+\[
+ E_9=2\alpha_2\left[
+ \frac{(1-s)(s-m)}{1-m}x_1^2
+ +(s-m)\left(y_1-\frac b{s-m}\right)^2+D\right].
+\]
+This forces $\alpha_2=0$, and every coefficient of $h$ before index 4
+vanishes. The remaining case has two free imaginary coordinates.
+
+\subsection{The final two-dimensional system}
+For $i=0$ and $h$ starting at 4, degrees 8 through 15 give
+\begin{equation}\label{eq:lastsubs}
+\begin{aligned}
+ r_4&=0,&r_5&=-\alpha_4y_1,&\alpha_5&=\alpha_4x_1,\\
+ r_6&=-\alpha_4y_2,\\
+ r_7&=\alpha_4x_2y_1-\alpha_4y_3-\alpha_6y_1,\\
+ \alpha_7&=(1-m)\alpha_4x_3+(s-1)\alpha_4x_1x_2
+                    +(1-s)\alpha_6x_1.
+\end{aligned}
+\end{equation}
+Set
+\begin{equation}\label{eq:RST}
+\begin{aligned}
+ \rho&=\alpha_6-\alpha_4x_2,\qquad R=R(x_1,y_1),\\
+ T&=m\bigl((1-s)x_1x_3+y_1y_3\bigr)-\gamma x_2,\\
+ S&=-\gamma(1+x_1^2+y_1^2+x_2^2+y_2^2)
+       -m(m-1)x_3^2+my_3^2.
+\end{aligned}
+\end{equation}
+Direct multiplication after \eqref{eq:lastsubs} gives
+\begin{equation}\label{eq:matrix}
+ \begin{gathered}
+ E_{17}=2(R\rho+T\alpha_4),\qquad E_{21}=2(S\alpha_4+T\rho),\\
+ \begin{pmatrix}S&T\\T&R\end{pmatrix}
+ \begin{pmatrix}\alpha_4\\\rho\end{pmatrix}
+ =\frac12\begin{pmatrix}E_{21}\\E_{17}\end{pmatrix}.
+\end{gathered}
+\end{equation}
+The quadratic form is positive on the second coordinate axis and negative
+on the first: $R\ge\Delta>0$, $S\le-\gamma<0$.
+In two dimensions the off-diagonal term contributes $-T^2$ to the determinant,
+so
+\begin{equation}\label{eq:det}
+ RS-T^2\le-\gamma\Delta<0.
+\end{equation}
+The matrix is therefore invertible for every average $v$.
+Equivalently, with no division by its determinant,
+\[
+ R E_{21}-T E_{17}=2\alpha_4(RS-T^2).
+\]
+Since $E_{17}=E_{21}=0$, $\alpha_4=0$ and then $\rho=\alpha_6=0$.
+Equation~\eqref{eq:lastsubs} makes every other difference coefficient zero.
+
+All eight initial indices are now covered. Every solution of $F=0$
+satisfies the coefficient equations used above, and these equations
+force $h=0$.
+Undoing the normalization shows that the original polynomials differ by a common unit phase. Together with
+Section~\ref{sec:sampling}, this proves the sufficient direction of
+Theorem~\ref{thm:main}.
+
+\section{Ambiguous pairs on and beyond the boundary}\label{sec:failure}
+The last four entries of \eqref{eq:assembly} span
+$t^8U_4$, where
+\[
+ U_4=\operatorname{span}_{\CC}\{a_0,a_1,a_2,t^6\}.
+\]
+For $c\le b^2/s$, we seek $v,h\in U_4$ such that $hv^\#+h^\#v=0$
+and $v+h$ is not proportional to $v-h$. Multiplying this pair by $t^8$
+gives an ambiguous pair in $U$, independently of $m$ and $\gamma$.
+
+Start at the boundary $c=b^2/s$. The polynomials
+$v=a_0+i(b/s)a_1$ and $h=ia_2-(b/s)t^6$ belong to $U_4$ and simplify to
+\[
+ v=1+it+i\frac bs t^2,\qquad h=it^4v,
+ \qquad f_\pm=v(1\pm it^4).
+\]
+On the real line, the factors $1+it^4$ and $1-it^4$ have identical
+moduli. This gives an explicit ambiguity at the boundary.
+
+To reach $c<b^2/s$, we adjust the average and difference while keeping
+both in $U_4$. The coefficients $W,K,Z$ below are chosen so that every
+coefficient of $hv^\#+h^\#v$, except those of degrees nine and twelve,
+vanishes identically. We solve the remaining two equations on a real curve
+in the $(X,Y)$-plane.
+For real $X,Y$ put
+\begin{align*}
+ W&=b+sXY-sY,&K&=-bX+(s-1)WX-W,\\
+ Z&=bsXY+c(1-s)X+WY,\\
+ v&=a_0+(X+iY)a_1+iW a_2+(Z+iK)t^6,\\
+ h&=ia_2+(-Y+i(1-s)X)t^6.
+\end{align*}
+Define
+\[
+\begin{aligned}
+ R_0&=c-2bY+s(1-s)X^2+sY^2,\\
+ G&=(b(2-s)+s^2Y)X+b-sY,\qquad H=(s-1)X-Y^2.
+\end{aligned}
+\]
+Direct multiplication gives the full polynomial identity
+\begin{equation}\label{eq:failureid}
+ hv^\#+h^\#v=2R_0t^9+2\bigl(HG-(1-s)XYR_0\bigr)t^{12}.
+\end{equation}
+By \eqref{eq:failureid}, $R_0=G=0$ implies $hv^\#+h^\#v=0$.
+
+If $b=0$, take $Y=0$ and $X=\sqrt{-c/(s(1-s))}$.
+This is real for $c\le0$ and gives $R_0=G=0$.
+If $b\ne0$, solving $G=0$ for $Y$ on $0\le X<1/s$ gives the curve
+\[
+ 0\le X<1/s,\qquad
+ Y=\frac{b((2-s)X+1)}{s(1-sX)}.
+\]
+Along this curve, $G=0$ and
+\begin{equation}\label{eq:curveR}
+ R_0(X)=c-\frac{b^2}s+s(1-s)X^2+
+             \frac{4b^2X^2}{s(1-sX)^2}.
+\end{equation}
+For $c=b^2/s$ choose $X=0$. For $c<b^2/s$, this expression is negative
+at zero, tends to $+\infty$ as $X\to(1/s)^-$, and has derivative
+\[
+ 2s(1-s)X+\frac{8b^2X}{s(1-sX)^3}>0\qquad(0<X<1/s).
+\]
+Thus, when $b\ne0$ and $c<b^2/s$, there is a unique root in $0<X<1/s$.
+If $b,c,s$ are rational, that root is specified by the quartic equation
+\[
+ \bigl(s^2(1-s)X^2+sc-b^2\bigr)(1-sX)^2+4b^2X^2=0
+\]
+together with the isolating interval $0<X<1/s$.
+
+The resulting pair $v+h,v-h$ has the same squared-modulus polynomial by \eqref{eq:failureid}.
+Both have constant coefficient one, whereas $h$ has first term $it^4$.
+They cannot differ by a constant phase: the constant coefficients would
+force that phase to be one, contradicting $h\ne0$.
+Multiplying by $t^8$ proves the necessary direction of
+Theorem~\ref{thm:main}.
+
+\section{Two explicit frames}\label{sec:examples}
+\subsection{Recovering the first released frame}
+At
+\[
+ (b,c,s,m,\gamma)=(1,4,\tfrac12,-2,1)
+\]
+formula~\eqref{eq:assembly} gives the eight polynomials of the first
+release~\cite{KimV1}. In particular $\Delta=2>0$.
+The convention $q_j=2\overline{p(j)}$ is unchanged. Thus the family theorem
+recovers the original frame as well as its phase-retrieval conclusion.
+The exact archived input is retained with the verification data in
+Section~\ref{sec:status}.
+
+\subsection{The twenty-term representative}
+At $(b,c,s,m,\gamma)=(0,1,\tfrac12,-1,1)$, one has $\Delta=1>0$.
+From its assembly basis $p$ form
+\[
+ r_0=p_0-\tfrac12p_6,\quad r_1=p_1-p_5,\quad
+ r_2=p_2-\tfrac12p_4+\tfrac12p_6,\quad r_j=p_j\ (3\le j\le7).
+\]
+This is a real triangular basis change with determinant one and gives exactly
+\eqref{eq:sparse}. To check its effect on signals, write $r=Ap$.
+Then $\sum x_kr_k=(A^Tx)^Tp$, and $A^T$ is invertible.
+Uniqueness up to phase in the $p$ coordinates therefore implies the same
+uniqueness in the $r$ coordinates. The resulting frame is different from the first
+released one, even though both prove the same upper bound.
+
+\begin{corollary}
+The explicit Gaussian-integer frame \eqref{eq:sparseframe} gives
+$m_{\CC}(8)\le26$.
+\end{corollary}
+
+For either successful example, an equivalent matrix statement is useful.
+Let $\mathcal A_Q(H)=(q_j^*Hq_j)_{j=1}^{26}$ on Hermitian matrices.
+The frame vectors $q_1,\ldots,q_{26}$ span $\CC^8$: a perpendicular vector would give a polynomial
+of degree at most 14 vanishing at 26 distinct points, hence the zero polynomial.
+If $H\ge0$ lies in the kernel, each $q_j^*Hq_j=0$ implies $Hq_j=0$,
+so spanning gives $H=0$. The same holds for $H\le0$.
+An indefinite rank-two Hermitian matrix is $xx^*-yy^*$ for nonproportional
+$x,y$ by spectral decomposition, and the phase-retrieval property excludes it.
+Thus
+\[
+ \ker\mathcal A_Q\cap\{H=H^*:0<\operatorname{rank}H\le2\}=\varnothing.
+\]
+
+\section{Scope and verification}\label{sec:status}
+Theorem~\ref{thm:main} classifies the family \eqref{eq:assembly} in the
+domain $0<s<1$, $m<0$, $\gamma>0$ and includes the original frame~\cite{KimV1}.
+The measurement bound remains $m_{\CC}(8)\le26$. The minimum number of
+measurements, including whether 25 suffice, is not determined here.
+We make no assertion of generic phase retrieval with 26 measurements.
+The positivity estimates used in the proof are expressed after
+signal-dependent normalization and do not provide a global stability
+constant or a noise-recovery guarantee.
+
+The proof uses polynomial algebra, Rolle's theorem, and elementary linear
+algebra.
+
+\input{verification_summary.tex}
+
+The research, exposition, and computational checks were developed with
+substantial AI assistance. External expert review and proof-assistant
+verification have not been completed. The first release remains available at its DOI~\cite{KimV1}.
+
+\appendix
+\section{The coefficient substitutions}\label{app:subs}
+The lists below record the substitutions used in Section~\ref{sec:suff}.
+In each list, the $p$-basis coefficients of $h$ below the indicated index
+vanish, while higher coefficients remain free. The recurrence in
+Section~\ref{sec:normal} gives the displayed substitutions. All denominators
+depend only on the fixed parameters and are nonzero under \eqref{eq:domain}.
+The final case $(i,j)=(0,4)$ appears in \eqref{eq:lastsubs}.
+\input{coefficient_substitutions.tex}
+
+\begin{thebibliography}{9}
+\bibitem{CEHV} A. Conca, D. Edidin, M. Hering, and C. Vinzant,
+\emph{An algebraic characterization of injectivity in phase retrieval},
+Applied and Computational Harmonic Analysis 38 (2015), 346--356.
+\href{https://doi.org/10.1016/j.acha.2014.06.005}{doi:10.1016/j.acha.2014.06.005}.
+\bibitem{Vinzant} C. Vinzant, \emph{A small frame and a certificate of its injectivity},
+2015 International Conference on Sampling Theory and Applications, 197--200.
+\href{https://arxiv.org/abs/1502.04656}{arXiv:1502.04656}.
+\bibitem{KimV1} J. Kim, \emph{An Explicit 26-Measurement Phase-Retrieving Frame
+in C8: Proof Candidate}, first release, 19 September 2026.
+\href{https://doi.org/10.5281/zenodo.22847200}{doi:10.5281/zenodo.22847200}.
+\end{thebibliography}
 \end{document}

@@ -1,0 +1,905 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "product_0_0_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_0_0_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_0_0_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_0_1_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_0_1_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_0_1_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_0_2_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_0_2_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_0_2_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_0_3_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_0_3_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_0_3_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_0_4_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_0_4_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_0_4_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_0_5_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_0_5_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_0_5_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_0_6_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_0_6_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_0_6_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_0_7_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_0_7_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_0_7_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_1_0_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_1_0_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_1_0_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_1_1_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_1_1_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_1_1_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_1_2_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_1_2_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_1_2_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_1_3_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_1_3_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_1_3_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_1_4_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_1_4_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_1_4_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_1_5_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_1_5_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_1_5_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_1_6_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_1_6_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_1_6_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_1_7_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_1_7_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_1_7_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_2_0_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_2_0_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_2_0_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_2_1_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_2_1_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_2_1_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_2_2_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_2_2_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_2_2_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_2_3_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_2_3_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_2_3_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_2_4_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_2_4_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_2_4_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_2_5_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_2_5_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_2_5_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_2_6_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_2_6_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_2_6_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_2_7_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_2_7_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_2_7_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_3_0_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_3_0_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_3_0_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_3_1_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_3_1_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_3_1_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_3_2_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_3_2_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_3_2_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_3_3_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_3_3_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_3_3_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_3_4_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_3_4_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_3_4_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_3_5_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_3_5_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_3_5_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_3_6_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_3_6_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_3_6_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_3_7_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_3_7_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_3_7_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_4_0_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_4_0_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_4_0_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_4_1_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_4_1_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_4_1_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_4_2_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_4_2_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_4_2_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_4_3_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_4_3_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_4_3_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_4_4_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_4_4_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_4_4_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_4_5_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_4_5_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_4_5_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_4_6_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_4_6_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_4_6_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_4_7_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_4_7_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_4_7_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_5_0_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_5_0_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_5_0_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_5_1_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_5_1_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_5_1_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_5_2_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_5_2_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_5_2_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_5_3_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_5_3_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_5_3_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_5_4_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_5_4_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_5_4_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_5_5_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_5_5_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_5_5_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_5_6_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_5_6_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_5_6_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_5_7_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_5_7_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_5_7_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_6_0_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_6_0_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_6_0_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_6_1_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_6_1_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_6_1_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_6_2_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_6_2_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_6_2_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_6_3_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_6_3_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_6_3_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_6_4_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_6_4_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_6_4_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_6_5_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_6_5_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_6_5_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_6_6_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_6_6_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_6_6_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_6_7_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_6_7_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_6_7_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_7_0_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_7_0_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_7_0_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_7_1_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_7_1_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_7_1_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_7_2_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_7_2_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_7_2_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_7_3_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_7_3_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_7_3_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_7_4_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_7_4_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_7_4_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_7_5_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_7_5_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_7_5_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_7_6_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_7_6_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_7_6_missing_13",
+      "pass": true
+    },
+    {
+      "name": "product_7_7_missing_1",
+      "pass": true
+    },
+    {
+      "name": "product_7_7_missing_5",
+      "pass": true
+    },
+    {
+      "name": "product_7_7_missing_13",
+      "pass": true
+    },
+    {
+      "name": "layer_4_6_E25",
+      "pass": true
+    },
+    {
+      "name": "layer_4_6_no_signal_denominators",
+      "pass": true
+    },
+    {
+      "name": "layer_1_5_E21",
+      "pass": true
+    },
+    {
+      "name": "layer_1_5_no_signal_denominators",
+      "pass": true
+    },
+    {
+      "name": "layer_2_4_E17",
+      "pass": true
+    },
+    {
+      "name": "layer_2_4_no_signal_denominators",
+      "pass": true
+    },
+    {
+      "name": "layer_2_6_E21",
+      "pass": true
+    },
+    {
+      "name": "layer_2_6_no_signal_denominators",
+      "pass": true
+    },
+    {
+      "name": "layer_0_2_E9",
+      "pass": true
+    },
+    {
+      "name": "layer_0_2_no_signal_denominators",
+      "pass": true
+    },
+    {
+      "name": "schur_elimination_identity",
+      "pass": true
+    },
+    {
+      "name": "layer_0_4_E17",
+      "pass": true
+    },
+    {
+      "name": "layer_0_4_E21",
+      "pass": true
+    },
+    {
+      "name": "layer_0_4_no_signal_denominators",
+      "pass": true
+    },
+    {
+      "name": "inherited_basis_specialization_0",
+      "pass": true
+    },
+    {
+      "name": "inherited_basis_specialization_1",
+      "pass": true
+    },
+    {
+      "name": "inherited_basis_specialization_2",
+      "pass": true
+    },
+    {
+      "name": "inherited_basis_specialization_3",
+      "pass": true
+    },
+    {
+      "name": "inherited_basis_specialization_4",
+      "pass": true
+    },
+    {
+      "name": "inherited_basis_specialization_5",
+      "pass": true
+    },
+    {
+      "name": "inherited_basis_specialization_6",
+      "pass": true
+    },
+    {
+      "name": "inherited_basis_specialization_7",
+      "pass": true
+    },
+    {
+      "name": "sparse_basis_transform_0",
+      "pass": true
+    },
+    {
+      "name": "sparse_basis_transform_1",
+      "pass": true
+    },
+    {
+      "name": "sparse_basis_transform_2",
+      "pass": true
+    },
+    {
+      "name": "sparse_basis_transform_3",
+      "pass": true
+    },
+    {
+      "name": "sparse_basis_transform_4",
+      "pass": true
+    },
+    {
+      "name": "sparse_basis_transform_5",
+      "pass": true
+    },
+    {
+      "name": "sparse_basis_transform_6",
+      "pass": true
+    },
+    {
+      "name": "sparse_basis_transform_7",
+      "pass": true
+    },
+    {
+      "name": "sparse_basis_transform_invertible",
+      "pass": true
+    },
+    {
+      "name": "sparse_product_dimension_exact_26",
+      "pass": true
+    }
+  ],
+  "check_count": 224,
+  "elapsed_seconds": 2.0760059356689453,
+  "exact_product_rank": 26,
+  "scope": "finite rational-function identities and exact rank; proof inequalities/case coverage in accompanying manuscript"
+}

@@ -1,8 +1,8 @@
 {
-  "title": "An Explicit 26-Measurement Phase-Retrieving Frame in C8: Proof Candidate",
+  "title": "An Explicit 26-Measurement Phase-Retrieving Frame in C8: A Five-Parameter Family and Its Exact Boundary (Proof Candidate, Version 2)",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "description": "An explicit Gaussian-integer 8-by-26 measurement frame and a self-contained candidate proof of global complex phase retrieval. The construction samples eight polynomials at 26 distinct positive real numbers. Three missing squared-modulus coefficients and exact strict-sign identities yield the claimed bound m_C(8) <= 26. No optimality, genericity, or numerical conditioning claim is made. The package includes the manuscript, LaTeX sources, exact matrix, original rational verifier and a separately transcribed symbolic verifier. Local logical and arithmetic checks have passed; external independent expert review and formal verification have not been completed. Substantial AI assistance was used. The manuscript and prose documentation use CC BY 4.0, while verification and build code use the MIT License; see LICENSE.md.",
+  "description": "Version 2 extends the explicit C8/26 proof candidate to a five-parameter family. For real parameters b,c,s,m,gamma with 0<s<1, m<0 and gamma>0, phase retrieval from any 26 distinct positive real sampling points holds if and only if c>b^2/s. The manuscript includes the original frame, a twenty-term polynomial representative, explicit ambiguous pairs throughout the complementary parameter region, and the full coefficient argument. The conclusion is m_C(8)<=26, without a minimality, genericity or numerical-stability claim. Reproducibility materials include both exact Gaussian-integer frames, the original family and boundary checkers, a separately transcribed SymPy checker, and execution evidence. Local logical review and exact symbolic checks have passed; external expert review and proof-assistant verification remain incomplete. Substantial AI assistance was used. Paper, documentation and data: CC BY 4.0. Verification and build code: MIT. Earlier files remain available through the first release and its DOI 10.5281/zenodo.22847200.",
   "creators": [
     {
       "name": "Kim, Jihun",
@@ -18,5 +18,7 @@
     "polynomial methods",
     "exact arithmetic",
     "proof candidate"
-  ]
+  ],
+  "version": "v2",
+  "publication_date": "2026-09-20"
 }
