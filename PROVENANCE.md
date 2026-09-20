@@ -58,4 +58,4 @@ semantic equivalence between every TeX formula and the checker. Historical
 logs and replay manifests remain historical evidence.
 
 The manuscript and its checks incorporate these review corrections. The
-version-specific archival record is linked after publication is confirmed.
+version-specific archival DOI is 10.5281/zenodo.22860179.

@@ -75,14 +75,13 @@ See the [logical-review checklist](docs/LOGICAL_REVIEW.md).
 
 Author: Jihun Kim, Independent Researcher.
 
-- Version 2 release and version-specific DOI: not yet created.
+- [Version 2 DOI: 10.5281/zenodo.22860179](https://doi.org/10.5281/zenodo.22860179)
+- [Version 2 GitHub release](https://github.com/shblue21/c8-phase-retrieval-proof-candidate/releases/tag/v2)
 - [All versions on Zenodo](https://doi.org/10.5281/zenodo.22847199)
 - [First release DOI](https://doi.org/10.5281/zenodo.22847200)
 
-The concept DOI links the archived version history; it is not a version-specific
-DOI for this v2 draft. Cite the repository/commit until v2 is archived.
-Version 2 is prepared for release; the version-specific DOI will be linked
-once the archival record is confirmed.
+The version-specific DOI identifies the archived v2 package. The concept DOI
+links all versions. The archived files match the v2 release commit byte for byte.
 DOI registration preserves an identifiable research artifact; it does not
 constitute mathematical peer review.
 
