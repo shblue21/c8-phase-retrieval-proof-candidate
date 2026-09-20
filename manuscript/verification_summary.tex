@@ -1,17 +1,18 @@
-Two implementations using SymPy check the coefficient identities, the
+Three scripts using SymPy check the coefficient identities, the
 specializations, the basis transformation, and the frame entries.
-The second was transcribed separately and imports neither the original
-checker nor its basis data. Together the checks cover the three missing
+The family and boundary scripts provide the first two check groups below.
+The third script was transcribed separately and imports neither the original
+family checker nor its basis data. Together the checks cover the three missing
 degrees in all 64 ordered products $p_jp_k^\#$, all 28 pairs $0\le i<j\le7$,
 the elimination and boundary identities, and all 416 entries across the
 two frames. The execution logs record the following completed checks:
 \begin{center}
 \begin{tabular}{lr}
 \toprule
-Implementation & Checks completed\\
+Check group & Checks completed\\
 \midrule
 Original family checker &224\\
-Boundary identities &11\\
+Boundary-identity checker &11\\
 Separate transcription &847\\
 \bottomrule
 \end{tabular}

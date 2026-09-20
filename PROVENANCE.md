@@ -41,3 +41,21 @@ log was supplied with that research and was not rerun in the local review.
 No numerical tolerance, random search, or failure to find a collision serves
 as the proof criterion. External independent expert review and proof-assistant
 verification have not been completed. The work used substantial AI assistance.
+
+## Review corrections
+
+The executable family checker now permits b=c=0 in its symbol assumptions
+where allowed by the theorem. The original received scripts are retained
+in `sources/received_code/`; only their execution copies were revised.
+The denominator check also rejects dependence on b or c. The original
+224 assertion labels, boundary 11 assertions and separate 847 checks remain
+unchanged. See [the logical-review checklist](docs/LOGICAL_REVIEW.md).
+
+`ARTIFACT_INTEGRITY.json` records reviewed source, PDF, code and data hashes.
+`check_artifact_integrity.py` checks that snapshot and LaTeX references, and
+can compare the extracted text of a rebuilt PDF. It does not establish
+semantic equivalence between every TeX formula and the checker. Historical
+logs and replay manifests remain historical evidence.
+
+The manuscript and its checks incorporate these review corrections. The
+version-specific archival record is linked after publication is confirmed.

@@ -34,8 +34,9 @@ uniqueness up to phase, we compare the average and difference of two
 possible signals. Coefficient elimination reduces the problem to positive
 quadratic expressions and an invertible two-by-two matrix. When $c\le b^2/s$,
 we construct nonproportional polynomials with identical squared moduli.
-The family contains the previously published frame and a representative
-with twenty monomial terms. The result gives $m_{\CC}(8)\le26$;
+The family contains the frame from the first release and, after an
+invertible change of signal coordinates, yields a representative whose
+defining polynomials contain twenty monomial terms in total. The result gives $m_{\CC}(8)\le26$;
 minimality is not established.
 \end{abstract}
 \noindent\textbf{Status.} Proof candidate; not peer reviewed.
@@ -87,7 +88,7 @@ We work with a larger family to identify the sign condition that separates
 uniqueness from ambiguity. The basis in \eqref{eq:sparse} is obtained from
 the parameter choice $(b,c,s,m,\gamma)=(0,1,\tfrac12,-1,1)$ by an invertible
 linear transformation, given in Section~\ref{sec:examples}. The frame
-in the first release~\cite{KimV1} is another member of the family.
+in the first release is another member of the family.
 
 Conca, Edidin, Hering, and Vinzant proved that $4d-4$ generic complex
 measurements suffice in dimension $d$~\cite{CEHV}. Vinzant constructed
@@ -291,8 +292,9 @@ Start the difference at 4 and eliminate through degree 16. One obtains
  +(s-m)\left(y_3-\frac b{s-m}\right)^2+D\right].
 \]
 The coefficients of the squared terms are positive, and $D>0$, so $\alpha_4=0$.
-The eliminated coefficients before index 6 also become zero. Restarting
-at 6 and eliminating through degree 19 yields
+The substitutions make all coefficients of $h$ below index 6, and also
+$r_6$, zero. Any remaining difference starts with $i\alpha_6p_6$.
+Restarting at 6 and eliminating through degree 19 yields
 \[
  E_{21}=-2\alpha_6\left[\gamma+m(m-1)x_3^2-my_3^2\right].
 \]
@@ -306,7 +308,7 @@ Start the difference at 2 and eliminate through degree 8. Then
  +(s-m)\left(y_1-\frac b{s-m}\right)^2+D\right].
 \]
 This forces $\alpha_2=0$, and every coefficient of $h$ before index 4
-vanishes. The remaining case has two free imaginary coordinates.
+vanishes. The remaining imaginary coefficients are $\alpha_4$ and $\alpha_6$.
 
 \subsection{The final two-dimensional system}
 For $i=0$ and $h$ starting at 4, degrees 8 through 15 give
@@ -441,7 +443,7 @@ At
  (b,c,s,m,\gamma)=(1,4,\tfrac12,-2,1)
 \]
 formula~\eqref{eq:assembly} gives the eight polynomials of the first
-release~\cite{KimV1}. In particular $\Delta=2>0$.
+release. In particular $\Delta=2>0$.
 The convention $q_j=2\overline{p(j)}$ is unchanged. Thus the family theorem
 recovers the original frame as well as its phase-retrieval conclusion.
 The exact archived input is retained with the verification data in
@@ -479,9 +481,15 @@ Thus
  \ker\mathcal A_Q\cap\{H=H^*:0<\operatorname{rank}H\le2\}=\varnothing.
 \]
 
+Conversely, if $x,y$ have equal measurements but do not differ by a
+common phase, then $H=xx^*-yy^*$ is a nonzero Hermitian matrix of rank
+at most two in $\ker\mathcal A_Q$. Indeed, $xx^*=yy^*$ would force $x,y$
+to differ by a unit-modulus scalar, including the zero-vector case.
+Thus the kernel condition and phase retrieval are equivalent.
+
 \section{Scope and verification}\label{sec:status}
 Theorem~\ref{thm:main} classifies the family \eqref{eq:assembly} in the
-domain $0<s<1$, $m<0$, $\gamma>0$ and includes the original frame~\cite{KimV1}.
+domain $0<s<1$, $m<0$, $\gamma>0$ and includes the original frame.
 The measurement bound remains $m_{\CC}(8)\le26$. The minimum number of
 measurements, including whether 25 suffice, is not determined here.
 We make no assertion of generic phase retrieval with 26 measurements.
@@ -496,14 +504,20 @@ algebra.
 
 The research, exposition, and computational checks were developed with
 substantial AI assistance. External expert review and proof-assistant
-verification have not been completed. The first release remains available at its DOI~\cite{KimV1}.
+verification have not been completed.
+
+\noindent\textbf{Version history.} The first version of this manuscript was
+released on 19 September 2026 and is archived at
+\href{https://doi.org/10.5281/zenodo.22847200}{doi:10.5281/zenodo.22847200}.
+This revision extends that construction to the family studied here.
 
 \appendix
 \section{The coefficient substitutions}\label{app:subs}
 The lists below record the substitutions used in Section~\ref{sec:suff}.
-In each list, the $p$-basis coefficients of $h$ below the indicated index
-vanish, while higher coefficients remain free. The recurrence in
-Section~\ref{sec:normal} gives the displayed substitutions. All denominators
+Each list assumes that the $p$-basis coefficients of $h$ below the stated
+index vanish. The recurrence in Section~\ref{sec:normal} determines the
+displayed components; components not yet determined remain free at that
+stage. All denominators
 depend only on the fixed parameters and are nonzero under \eqref{eq:domain}.
 The final case $(i,j)=(0,4)$ appears in \eqref{eq:lastsubs}.
 \input{coefficient_substitutions.tex}
@@ -516,8 +530,5 @@ Applied and Computational Harmonic Analysis 38 (2015), 346--356.
 \bibitem{Vinzant} C. Vinzant, \emph{A small frame and a certificate of its injectivity},
 2015 International Conference on Sampling Theory and Applications, 197--200.
 \href{https://arxiv.org/abs/1502.04656}{arXiv:1502.04656}.
-\bibitem{KimV1} J. Kim, \emph{An Explicit 26-Measurement Phase-Retrieving Frame
-in C8: Proof Candidate}, first release, 19 September 2026.
-\href{https://doi.org/10.5281/zenodo.22847200}{doi:10.5281/zenodo.22847200}.
 \end{thebibliography}
 \end{document}

@@ -1,8 +1,6 @@
 from research import *
 import time,json
-# b and c may vanish in the theorem; only s,m,g are nonzero on its domain.
-b,c=S.symbols('b c',real=True)
-s,m,g=S.symbols('s m g',real=True,nonzero=True)
+b,c,s,m,g=S.symbols('b c s m g',real=True,nonzero=True)
 a=S.Matrix([1+I*T+b*T**3+I*c*T**5,T**2+I*s*T**3-b*T**5,T**4+I*T**5])
 J=S.Matrix([[2*c,0,2],[0,2*s,0],[2,0,0]])
 p=[S.expand(z) for z in a+g*T**8*J.inv()*a.applyfunc(con)]+[T**6+I*m*T**7]+[S.expand(T**8*z) for z in a]+[T**14]

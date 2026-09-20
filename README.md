@@ -61,16 +61,28 @@ python3 scripts/build_paper.py
 ```
 
 The output is `_build/PR26_Proof_Candidate.pdf`; the checked-in PDF is preserved.
+To check the reviewed source/PDF/data snapshot and compare PDF text:
+
+```sh
+python3 scripts/check_artifact_integrity.py --rebuilt-pdf _build/PR26_Proof_Candidate.pdf
+```
+
+This requires Poppler's `pdftotext`. The check detects stale files and unresolved
+references; it is not a formal proof or a semantic parser of all formulas.
+See the [logical-review checklist](docs/LOGICAL_REVIEW.md).
 
 ## Citation and versions
 
 Author: Jihun Kim, Independent Researcher.
 
-- [Version 2 GitHub release](https://github.com/shblue21/c8-phase-retrieval-proof-candidate/releases/tag/v2)
+- Version 2 release and version-specific DOI: not yet created.
 - [All versions on Zenodo](https://doi.org/10.5281/zenodo.22847199)
 - [First release DOI](https://doi.org/10.5281/zenodo.22847200)
 
-The version-specific v2 DOI will be linked after archival confirmation.
+The concept DOI links the archived version history; it is not a version-specific
+DOI for this v2 draft. Cite the repository/commit until v2 is archived.
+Version 2 is prepared for release; the version-specific DOI will be linked
+once the archival record is confirmed.
 DOI registration preserves an identifiable research artifact; it does not
 constitute mathematical peer review.
 

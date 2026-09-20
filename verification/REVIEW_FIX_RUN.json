@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "date_utc": "2026-09-20T15:26:21.828820+00:00",
+  "python": "3.9.6",
+  "sympy": "1.14.0",
+  "public_repo_base_commit": "45797d0aaa9defb7e5ef416088048428ec00491a",
+  "working_tree_changes_not_committed_or_pushed": true,
+  "run_scope": "revised b,c assumptions and denominator assertions; original224 groups, boundary11, separate847; expected payloads and frames unchanged",
+  "log_sha256": "fda115860d32a16ac7aeb401a86f49cbd9125f286e936a34e6b5df6e9fda75f9",
+  "checks": {
+    "family": 224,
+    "boundary": 11,
+    "separate_transcription": 847
+  },
+  "script_hashes": {
+    "verification/provided/code/parametric8.py": "4bf992b03f00cdc7a3f4ea764241837f288c3e1d3b56ace51ba72bcda730263b",
+    "verification/provided/code/verify_parametric8.py": "76fc8f17445c7cc757357d03b25f1e1ff58142302b039bc303e94ffaf5e225ab",
+    "verification/provided/code/verify_sharp_boundary.py": "b2b97aa0212a2163d792a3e1bdecc647e1ed08647798726f7a9796df773d3b6e",
+    "verification/independent/check_c8_family.py": "47255dba80980ee70351882d26a361a17008576aba2bfb68dcfcbd013edcb36b"
+  },
+  "expected_output_hashes": {
+    "verification/provided/data/parametric8_checks.json": "ae9aa83f7f1a319a09535df3808ebf984ec3e630ad9d55db7d7e3e0faa837ace",
+    "verification/provided/data/sharp_boundary_checks.json": "0315ecfe531db83ede72ea2abf7c0779919e63c551efb92c0ed7a7d9ba1ab96e",
+    "verification/independent/RESULT.json": "41016ed40c96e05dbb0d9ca48817ee4d3f5b5ca4910d075307cf808eae1c7b14",
+    "data/v2_sparse_frame_gaussian_integer.json": "53138369bcb0d14ce8d64bb9ac195f808232f189fa8e9814ff1ad86219826c58"
+  }
+}

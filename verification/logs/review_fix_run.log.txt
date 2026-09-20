@@ -1,0 +1,55 @@
+PASS 224 exact checks; product rank 26 ; elapsed 2.191225051879883
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "entire_F_identity",
+      "pass": true
+    },
+    {
+      "name": "G_zero_under_rational_curve",
+      "pass": true
+    },
+    {
+      "name": "R_curve",
+      "pass": true
+    },
+    {
+      "name": "quartic_clearing",
+      "pass": true
+    },
+    {
+      "name": "completed_square",
+      "pass": true
+    },
+    {
+      "name": "bzero_G",
+      "pass": true
+    },
+    {
+      "name": "bzero_R",
+      "pass": true
+    },
+    {
+      "name": "boundary_v",
+      "pass": true
+    },
+    {
+      "name": "boundary_h",
+      "pass": true
+    },
+    {
+      "name": "strict_interior_collision",
+      "pass": true
+    },
+    {
+      "name": "positive_derivative_formula",
+      "pass": true
+    }
+  ],
+  "count": 11,
+  "elapsed_seconds": 0.1132960319519043,
+  "scope": "finite exact polynomial/rational identities for the displayed sharp boundary proof"
+}
+PASS 847 checks; seconds 3.9953701496124268
+PASS: v2 family 224, boundary 11, separate transcription 847; payloads and exact frames agree.

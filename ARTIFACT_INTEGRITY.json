@@ -1,0 +1,81 @@
+{
+  "status": "REVIEWED_SNAPSHOT",
+  "scope": "hash coupling and reference checks, not semantic equivalence or formal proof",
+  "main_tex": "manuscript/proof_candidate.tex",
+  "included_tex": [
+    "manuscript/author_metadata.tex",
+    "manuscript/coefficient_substitutions.tex",
+    "manuscript/verification_summary.tex"
+  ],
+  "pdf": "manuscript/PR26_Proof_Candidate.pdf",
+  "files": [
+    {
+      "path": "data/v1_frame_gaussian_integer.json",
+      "sha256": "354fedefbbb0323ca506b65518fe1b09465aedf42d90fc26e32162b30ab09107"
+    },
+    {
+      "path": "data/v2_sparse_frame_gaussian_integer.json",
+      "sha256": "53138369bcb0d14ce8d64bb9ac195f808232f189fa8e9814ff1ad86219826c58"
+    },
+    {
+      "path": "manuscript/PR26_Proof_Candidate.pdf",
+      "sha256": "9368e1e1dae8fb37b79bcaa8d3e0d39b180c7538fed2f143283d91f5b21d0b38"
+    },
+    {
+      "path": "manuscript/author_metadata.tex",
+      "sha256": "065aba8cc5b5722a70d9117bf116f465b340944f3232c36e3a06249e2544b897"
+    },
+    {
+      "path": "manuscript/coefficient_substitutions.tex",
+      "sha256": "88b34cf79daf9958a3fc9bb54d8bd03d45e069cc8657138178313288e1c9379b"
+    },
+    {
+      "path": "manuscript/proof_candidate.tex",
+      "sha256": "098a8d54801f1621c0871e6da3f7efe6b9977aa6b2c8d3f16315e3f372a7ded7"
+    },
+    {
+      "path": "manuscript/verification_summary.tex",
+      "sha256": "ce840deec30dc48c4e07983cc85430276ab9751c366d574c5b872071b52f69bd"
+    },
+    {
+      "path": "scripts/check_artifact_integrity.py",
+      "sha256": "581f56a54490cda616a751fe276cc19675251c75fc59079c7866bfac78dbd14d"
+    },
+    {
+      "path": "verification/independent/RESULT.json",
+      "sha256": "41016ed40c96e05dbb0d9ca48817ee4d3f5b5ca4910d075307cf808eae1c7b14"
+    },
+    {
+      "path": "verification/independent/check_c8_family.py",
+      "sha256": "47255dba80980ee70351882d26a361a17008576aba2bfb68dcfcbd013edcb36b"
+    },
+    {
+      "path": "verification/provided/code/parametric8.py",
+      "sha256": "4bf992b03f00cdc7a3f4ea764241837f288c3e1d3b56ace51ba72bcda730263b"
+    },
+    {
+      "path": "verification/provided/code/research.py",
+      "sha256": "f9be9a149f557dbb9daddd3a2a0076457901a8c5cae5ebd4e3880cb3cafb60c8"
+    },
+    {
+      "path": "verification/provided/code/verify_parametric8.py",
+      "sha256": "76fc8f17445c7cc757357d03b25f1e1ff58142302b039bc303e94ffaf5e225ab"
+    },
+    {
+      "path": "verification/provided/code/verify_sharp_boundary.py",
+      "sha256": "b2b97aa0212a2163d792a3e1bdecc647e1ed08647798726f7a9796df773d3b6e"
+    },
+    {
+      "path": "verification/provided/data/parametric8_checks.json",
+      "sha256": "ae9aa83f7f1a319a09535df3808ebf984ec3e630ad9d55db7d7e3e0faa837ace"
+    },
+    {
+      "path": "verification/provided/data/sharp_boundary_checks.json",
+      "sha256": "0315ecfe531db83ede72ea2abf7c0779919e63c551efb92c0ed7a7d9ba1ab96e"
+    },
+    {
+      "path": "verification/provided/data/sparse8_frame_gaussian_integer.json",
+      "sha256": "a4f2a3f30135fdc2155f09ee57bd52d865abbca669e8f978c6480ed445acae74"
+    }
+  ]
+}

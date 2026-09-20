@@ -1,8 +1,9 @@
 # Publication and reproducibility
 
 Version 2 is a C8-focused revision of the first proof-candidate release.
-The GitHub release is archived by the existing Zenodo integration as a new
-version in the same record family. Each archived version has a distinct DOI;
+When publication resumes, the GitHub release should be archived by the existing
+Zenodo integration as a new version in the same record family. No v2 release
+or version-specific DOI has been created yet. Each archived version has a distinct DOI;
 the concept DOI 10.5281/zenodo.22847199 identifies all versions.
 
 The manuscript is a preprint/proof candidate, not a completed external peer
